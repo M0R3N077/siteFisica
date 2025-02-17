@@ -64,24 +64,24 @@
     padding: 20px;
     width: 500px;
     border-radius: 30px;
-    background-image: linear-gradient(to bottom, #ffffff, rgb(198, 185, 212), #5019b6); /* Gradiente de branco para roxo em três cores */
+    background-image: linear-gradient(to bottom, rgb(235, 235, 235), rgb(235, 235, 235), rgb(235, 235, 235)); /* Gradiente de branco para roxo em três cores */
     margin-top: 400px;
     margin-right: 300px;
     font-size: 18px;    
-    color: black; /* Letras pretas */
+    color: black; /* Letras pretas */  
     text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff; /* Borda branca nas letras */
-    border: 0.1px solid black; /* Borda preta ao redor da caixa */
+    box-shadow: #5019b6;
     box-sizing: border-box; /* Garante que a borda não afete o tamanho total da caixa */
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transições suaves para o efeito */
+    font-family: "Poppins";
+    font-size: 15px;
+    font-weight: 300px;
 }
 
 .text-free-fall:hover {
-    transform: scale(1.04) rotate3d(1, 1, 0, 15deg); /* Zoom leve e maior inclinação */
+    transform: scale(1.07);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
-    border-color: #9b4dca; /* Muda a cor da borda para o roxo médio durante o hover */
 }
-
-
 
 
     .img-free-fall{
@@ -136,4 +136,9 @@
     #segundoH2 span:nth-child(7) { animation-delay: 0.6s; }
     #segundoH2 span:nth-child(8) { animation-delay: 0.7s; }
     
-    
+    .caveat-uniquifier {
+      font-family: "Caveat", serif;
+      font-optical-sizing: auto;
+      font-weight: weight;
+      font-style: normal;
+    }

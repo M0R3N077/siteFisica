@@ -1,0 +1,97 @@
+.galileu{
+    min-height: 100vh;
+    background: url('../src/galileu galiliei.jpg') no-repeat center/cover;
+    filter: grayscale(30%);
+   text-align: center;
+   padding: 20px;
+   width: 100%;
+}
+
+.galileu-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+    min-height: 00px;
+  }
+  
+  .text-galileu {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 250px;
+    color: rgb(255, 255, 255);
+   font-family: "Poppins";
+   font-weight: 300;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .text-galileu:hover{
+    transform: scale(1.2);
+  }
+
+
+  #galileu-title {
+    font-size: 70px;
+    color: rgb(219, 144, 72); /* Cor principal do texto */
+    text-shadow:
+      -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
+  }
+
+  .topic span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: float 0.6s forwards ease-in-out;
+  }
+  
+  .topic span:nth-child(1) { animation-delay: 0s; }
+  .topic span:nth-child(2) { animation-delay: 0.1s; }
+  .topic span:nth-child(3) { animation-delay: 0.2s; }
+  .topic span:nth-child(4) { animation-delay: 0.3s; }
+  .topic span:nth-child(5) { animation-delay: 0.4s; }
+  .topic span:nth-child(6) { animation-delay: 0.5s; }
+  .topic span:nth-child(7) { animation-delay: 0.6s; }
+  .topic span:nth-child(8) { animation-delay: 0.7s; }
+  .topic span:nth-child(9) { animation-delay: 0.8s; }
+  .topic span:nth-child(10) { animation-delay: 0.9s; }
+  .topic span:nth-child(11) { animation-delay: 1s; }
+  .topic span:nth-child(12) { animation-delay: 1.1s; }
+  .topic span:nth-child(13) { animation-delay: 1.2s; }
+  .topic span:nth-child(14) { animation-delay: 1.3s; }
+  .topic span:nth-child(15) { animation-delay: 1.4s; }
+  .topic span:nth-child(16) { animation-delay: 1.5s; }
+  .topic span:nth-child(17) { animation-delay: 1.6s; }
+  .topic span:nth-child(18) { animation-delay: 1.7s; }
+  .topic span:nth-child(19) { animation-delay: 1.8s; }
+  .topic span:nth-child(20) { animation-delay: 1.9s; }
+  .topic span:nth-child(21) { animation-delay: 2s; }
+  .topic span:nth-child(22) { animation-delay: 2.1s; }
+  .topic span:nth-child(23) { animation-delay: 2.2s; }
+  .topic span:nth-child(24) { animation-delay: 2.3s; }
+  
+  @keyframes float {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    50% {
+      opacity: 0.7;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

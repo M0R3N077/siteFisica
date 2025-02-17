@@ -13,10 +13,13 @@
 }
 
 .logo {
-    font-size: 24px;
     font-weight: bold;
     color: white;
     transition: transform 0.3s;
+}
+
+.logo img{
+  width: 100px;
 }
 
 .logo:hover {

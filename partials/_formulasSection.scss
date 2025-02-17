@@ -8,6 +8,8 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
+    font-family: "Poppins";
+    font-weight: 300;
 }
 
 .gif-newton img{
@@ -53,6 +55,8 @@
 .formula-item h3 {
     font-size: 18px;
     color: white;
+    font-family: "Poppins";
+    font-weight: 700;
 }
 
 .formula-item ul {
@@ -109,10 +113,9 @@
 .roxo {
     position: relative;
     display: inline-block;
-    animation: flutuarAgressivo 6s ease-in-out infinite,  /* Aumentei a duração para 4s */
-    rotacionarSuave 6s infinite linear,  /* Aumentei a duração para 4s */
-    brilhoAgressivo 3s ease-in-out infinite alternate;
-    color: #5019b6; /* Roxo escuro */
+    animation: flutuarSuave 4s ease-in-out infinite,  
+    brilhoPulsante 2.5s ease-in-out infinite alternate;
+    color: #5019b6; 
     text-shadow: 
         -2px -2px 0 black,  
          2px -2px 0 black,  
@@ -120,28 +123,20 @@
          2px  2px 0 black; /* Borda preta */
 }
 
-@keyframes flutuarAgressivo {
-    0% { transform: translateY(0) scale(1) rotate(0deg); }
-    25% { transform: translateY(-30px) scale(1.4) rotate(15deg); } /* Menos rotação */
-    50% { transform: translateY(0) scale(1) rotate(0deg); }
-    75% { transform: translateY(30px) scale(1.4) rotate(-15deg); } /* Menos rotação */
-    100% { transform: translateY(0) scale(1) rotate(0deg); }
+/* Flutuação mais fluida e natural */
+@keyframes flutuarSuave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); } /* Movimentação mais sutil */
+    100% { transform: translateY(0); }
 }
 
-/* Efeito de rotação mais suave */
-@keyframes rotacionarSuave {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); } /* Diminui a rotação para 360 graus */
+/* Brilho pulsante mais controlado */
+@keyframes brilhoPulsante {
+    0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #5019b6, 0 0 15px #5019b6; }
+    100% { text-shadow: 0 0 15px #ffffff, 0 0 30px #7e7d7f, 0 0 45px #686869; }
 }
 
-/* Efeito de brilho explosivo */
-@keyframes brilhoAgressivo {
-    0% { text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #4B0082, 0 0 20px #4B0082, 0 0 25px #4B0082; }
-    50% { text-shadow: 0 0 30px #ffffff, 0 0 50px #ffffff, 0 0 60px #4B0082, 0 0 80px #4B0082, 0 0 100px #4B0082; }
-    100% { text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 15px #4B0082, 0 0 20px #4B0082, 0 0 25px #4B0082; }
-}
-
-/* Atraso progressivo para efeito mais natural */
+/* Atraso progressivo para um efeito mais sincronizado */
 .roxo:nth-child(1) { animation-delay: 0s; }
 .roxo:nth-child(2) { animation-delay: 0.1s; }
 .roxo:nth-child(3) { animation-delay: 0.2s; }
