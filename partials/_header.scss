@@ -1,0 +1,80 @@
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: transparent;
+    mix-blend-mode: difference;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    gap: 50px;
+}
+
+.nav-links a {
+  font-size: 20px;
+  color: white;
+  border: 3px solid currentColor; /* A borda sempre terá a cor do texto */
+  padding: 8px 24px; /* Aumenta o padding para um espaçamento melhor */
+  display: inline-block;
+  background: transparent;
+  border-radius: 10px; /* Arredondamento leve */
+  transition: color 0.3s, border-color 0.3s, border-radius 0.3s;
+  margin-top: 10px;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+  border-color: #ffcc00;
+  border-radius: 20px; /* Aumenta o arredondamento no hover */
+}
+
+.spacer {
+    height: 100vh;
+}
+
+.content {
+    padding: 50px;
+    background: white;
+    color: black;
+}
+
+.menu-icon {
+    font-size: 30px;
+      background: transparent;  /* Remove qualquer cor de fundo */
+      border: 3px solid currentColor;
+      padding: 6px 16px; /* Aumenta o padding para um espaçamento melhor */
+      outline: none;            /* Remove outline de foco (mas lembre-se da acessibilidade!) */
+      cursor: pointer;          /* Mantém o cursor de "mãozinha" */
+      color: white;             /* Se precisar de alguma cor específica para o SVG */
+      font-size: 30px;
+      border-radius: 10px; /* Arredondamento leve */
+      transition: color 0.3s, border-color 0.3s, border-radius 0.3s;
+  }
+
+  .menu-icon:hover{
+    color: #ffcc00;
+  border-color: #ffcc00;
+  border-radius: 20px; /* Aumenta o arredondamento no hover */
+  }
+  
+  
+ 
+

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queda Livre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Menu Lateral (direito) -->
+  <aside class="side-menu" id="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="#historia">História</a></li>
+      <li><a href="#relatos">Relatos</a></li>
+      <li><a href="#frases">Frases</a></li>
+      <li><a href="#quizzes">Quizzes</a></li>
+      <li><a href="#mensagens">Mensagens</a></li>
+    </ul>
+  </aside>
+    
+    <header class="header">
+        <div class="logo">Meu Site</div>
+        <nav class="nav-links">
+            <a href="#hero-id">Início</a>
+            <a href="#content">Teoria</a>
+            <a href="#">Pratica</a>
+            <button class="menu-icon" onclick="toggleMenu()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </button>
+        </nav>
+    </header>
+
+    <section id="hero-id" class="hero-section">
+        <div class="hero-overlay">
+        <div class="title">
+          <div class="cssanimation leFlyInTop sequence">
+            <span>Q</span><span>u</span><span>e</span><span>d</span><span>a</span> 
+            <span>l</span><span>i</span><span>v</span><span>r</span><span>e</span><span>:</span>
+          </div>
+        </div>
+
+        <div class="subtitle">
+          <h2>Movimento de um corpo sob a influência exclusiva da gravidade, sem resistência do ar.</h2>
+        </div>
+
+        <div class="teacher-name">
+          <h3>
+              <span>P</span><span>r</span><span>o</span><span>f</span><span>e</span><span>s</span><span>s</span><span>o</span><span>r</span><span>:</span> 
+              <span>T</span><span>i</span><span>a</span><span>g</span><span>o</span> 
+              <span>T</span><span>o</span><span>l</span><span>e</span><span>d</span><span>o</span>
+          </h3>
+      </div>
+      
+      
+        
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    </section>
+
+    <section id="content" class="free-fall">
+      <div id="firstTopic" class="topic">
+        <h2>Queda Livre:</h2>       
+        <h2 id="segundoH2">
+            <span>C</span><span>o</span><span>n</span><span>c</span><span>e</span><span>i</span><span>t</span><span>o</span>
+        </h2>       
+      </div>
+      
+        
+          <div class="text-free-fall">
+            <p>A queda livre acontece quando um objeto cai apenas por causa da força da gravidade, sem a interferência do ar ou de qualquer outra força. Isso significa que, ao soltar um objeto, ele vai começar a cair para o chão e sua velocidade vai aumentar a cada segundo que passa, porque a gravidade o acelera. Todos os objetos caem da mesma forma, independente do tamanho ou peso, desde que não haja resistência do ar. Isso é o que acontece, por exemplo, quando você deixa cair uma bola ou uma pena, mas sem o vento ou outras condições que possam interferir.</p>
+          </div>
+          <div class="img-free-fall">
+            <img src="./src/free-fall.webp" alt="imagem exemplo de queda livre">
+          </div>
+        
+    </section>
+
+    <section class="formulas">
+
+      <div class="gif-newton">
+        <img src="./src/newtonMove.gif" alt="">
+      </div>
+      <div class="topic">
+        <h2>Fórmulas 
+            <span class="roxo">F</span><span class="roxo">u</span><span class="roxo">n</span><span class="roxo">d</span><span class="roxo">a</span><span class="roxo">m</span><span class="roxo">e</span><span class="roxo">n</span><span class="roxo">t</span><span class="roxo">a</span><span class="roxo">i</span><span class="roxo">s</span><span class="roxo">:</span>
+        </h2>
+    </div>
+      <div class="formulas-grid">
+        <!-- Bloco de Relato -->
+        <div class="formula-item">
+          <h3>v = v0​ + g⋅t</h3>
+          <ul>
+            <li>v = velocidade final do objeto</li>
+            <li>v_0 = velocidade inicial do objeto (se o objeto começou do repouso, então v_0 = 0)</li>
+            <li>g = aceleração da gravidade (aproximadamente 9,8 m/s²)</li>
+            <li>t = tempo de queda</li>
+          </ul>
+        </div>
+    
+        <div class="formula-item">
+          <h3>s = s0 + v0 ⋅ t + 1/2 ⋅ g ⋅ t2
+             </h3>
+          <ul>
+            <li>s = posição final (distância percorrida)</li>
+            <li>s_0 = posição inicial do objeto</li>
+            <li>v_0 = velocidade inicial do objeto</li>
+            <li>g = aceleração da gravidade</li>
+            <li>t = tempo</li>
+          </ul>
+        </div>
+    
+        <!-- Adicione mais itens conforme necessário -->
+        <div class="formula-item">
+          <h3>v2 = v02 ​+ 2⋅g⋅(s − s0​)</h3>
+          <ul>
+            <li>v = velocidade final</li>
+            <li>v_0 = velocidade inicial</li>
+            <li>g = aceleração da gravidade</li>
+            <li>s = posição final</li>
+            <li>s_0 = posição inicial</li>
+          </ul>
+        </div>
+  
+        <div class="formula-item">
+          <h3>s − s0 ​= (v0 + v /2) * t</h3>
+          <ul>
+            <li>s - s_0 = distância percorrida</li>
+            <li>v_0 = velocidade inicial</li>
+            <li>v = velocidade final</li>
+            <li>t = tempo</li>
+          </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <section class="galileu">
+      
+    </section>
+
+
+
+  
+</body>
+</html>

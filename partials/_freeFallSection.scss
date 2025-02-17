@@ -1,0 +1,139 @@
+
+.free-fall {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    // background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(129, 106, 62), rgb(253, 105, 0), rgb(255, 115, 0));
+    // background-color: rgb(52, 52, 52);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.free-fall::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../src/bg-free-fall.jpg') no-repeat center/cover;
+    filter: grayscale(30%);
+    z-index: -1;
+}
+
+#firstTopic{
+    z-index: 100;
+    margin-right: 920px;
+    margin-top: 30px;
+}
+
+#firstTopic h2 {
+    color: white; /* Cor do texto */
+    -webkit-text-stroke: 1px black; /* Borda preta ao redor do texto */
+    text-shadow: 
+      -1px -1px 0 black,  
+       1px -1px 0 black,
+      -1px  1px 0 black,
+       1px  1px 0 black; /* Alternativa para navegadores sem text-stroke */
+       font-family: "Delicious Handrawn";
+    font-size: 70px;
+    margin-top: 1px;
+  }
+
+
+#segundoH2 {
+    font-family: "Hanalei Fill", serif;
+    letter-spacing: 3px;
+    font-size: 36px;
+    display: inline-block;
+    position: relative;
+    margin-left: 35px;
+}
+
+#segundoH2 span {
+    position: relative;
+    display: inline-block;
+    animation: flutuar 3s infinite ease-in-out;
+    color: #5019b6; /* Cor do texto */
+}
+
+.text-free-fall {
+    position: absolute;
+    padding: 20px;
+    width: 500px;
+    border-radius: 30px;
+    background-image: linear-gradient(to bottom, #ffffff, rgb(198, 185, 212), #5019b6); /* Gradiente de branco para roxo em três cores */
+    margin-top: 400px;
+    margin-right: 300px;
+    font-size: 18px;    
+    color: black; /* Letras pretas */
+    text-shadow: 1px 1px 0 #ffffff, -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff; /* Borda branca nas letras */
+    border: 0.1px solid black; /* Borda preta ao redor da caixa */
+    box-sizing: border-box; /* Garante que a borda não afete o tamanho total da caixa */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; /* Transições suaves para o efeito */
+}
+
+.text-free-fall:hover {
+    transform: scale(1.04) rotate3d(1, 1, 0, 15deg); /* Zoom leve e maior inclinação */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
+    border-color: #9b4dca; /* Muda a cor da borda para o roxo médio durante o hover */
+}
+
+
+
+
+    .img-free-fall{
+        margin-left: 750px;
+        margin-bottom: 200px;
+    }
+
+    .img-free-fall img{
+        max-width: 450px;
+       
+    }
+
+
+    .container-free-fall > div {
+        transform: translateY(-100vh);
+        opacity: 0;
+        transition: transform 1s ease-out, opacity 5s ease-out;
+    }
+    
+    .container-free-fall > div.fall {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+      @keyframes flutuar {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+  
+    
+    /* Efeito de flutuação contínua */
+    @keyframes flutuar {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+        100% { transform: translateY(0); }
+    }
+    
+    /* Atraso progressivo para efeito mais natural */
+    #segundoH2 span:nth-child(1) { animation-delay: 0s; }
+    #segundoH2 span:nth-child(2) { animation-delay: 0.1s; }
+    #segundoH2 span:nth-child(3) { animation-delay: 0.2s; }
+    #segundoH2 span:nth-child(4) { animation-delay: 0.3s; }
+    #segundoH2 span:nth-child(5) { animation-delay: 0.4s; }
+    #segundoH2 span:nth-child(6) { animation-delay: 0.5s; }
+    #segundoH2 span:nth-child(7) { animation-delay: 0.6s; }
+    #segundoH2 span:nth-child(8) { animation-delay: 0.7s; }
+    
+    
