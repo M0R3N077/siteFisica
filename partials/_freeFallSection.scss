@@ -50,6 +50,7 @@
     display: inline-block;
     position: relative;
     margin-left: 35px;
+    z-index: 10000;
 }
 
 #segundoH2 span {
@@ -142,3 +143,6 @@
       font-weight: weight;
       font-style: normal;
     }
+
+
+  

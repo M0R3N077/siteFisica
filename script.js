@@ -1,3 +1,4 @@
+
 //waves
 let wave1 = document.querySelector('#wave1');
 let wave2 = document.querySelector('#wave2');
@@ -73,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(section);
 });
 
+
+
  // Seleciona todos os itens de formula
  document.addEventListener("DOMContentLoaded", () => {
   const formulaItems = document.querySelectorAll(".formula-item");
@@ -87,4 +90,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
   formulaItems.forEach((item) => observerformulas.observe(item));
 });
+
+
+//Titulo do Galileu
+document.addEventListener("DOMContentLoaded", function () {
+    const spans = document.querySelectorAll("#galileu-title span");
+    spans.forEach((span, index) => {
+        setTimeout(() => {
+            span.style.opacity = "1";
+            span.style.transform = "translateY(0)";
+        }, index * 100); // Animação em cascata
+    });
+});
+
+
+//Gravidade
+function iniciarQueda() {
+    let altura = parseFloat(document.getElementById("gravity-input").value);
+    let g = 9.8; // Aceleração da gravidade em m/s²
+    let tempo = Math.sqrt((2 * altura) / g); // Tempo de queda livre
+
+    let objeto = document.getElementById("object");
+    let fallArea = document.querySelector(".fall-area");
+    let alturaMaxima = fallArea.clientHeight; // Altura da área de queda
+    let alturaObjeto = objeto.clientHeight; // Altura do objeto
+
+    // **Conversão metros → pixels** (100m = alturaMaxima px)
+    let escala = alturaMaxima / 100; 
+    let distanciaPixels = altura * escala;
+
+    // **Cálculo correto da posição final**
+    let posicaoFinal = alturaMaxima - alturaObjeto; 
+
+    // **Evita que o objeto ultrapasse o chão**
+    if (distanciaPixels > posicaoFinal) {
+        distanciaPixels = posicaoFinal;
+    }
+
+    // **Redefinir a posição inicial corretamente**
+    objeto.style.display = "block";
+    objeto.style.transition = "none";  
+    objeto.style.top = "0px"; 
+
+    // **Forçar um pequeno delay antes de aplicar a animação**
+    setTimeout(() => {
+        objeto.style.transition = `top ${tempo}s ease-in`; 
+        objeto.style.top = `${posicaoFinal}px`;
+    }, 50);
+
+    // **Exibe o tempo correto após a queda**
+    setTimeout(() => {
+        document.getElementById("result").innerHTML = 
+            `⏳ O objeto levou aproximadamente <strong>${tempo.toFixed(2)} segundos</strong> para atingir o chão.`;
+    }, tempo * 1000);
+}
+
 

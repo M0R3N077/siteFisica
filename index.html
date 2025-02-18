@@ -52,7 +52,7 @@
         </div>
 
         <div class="subtitle">
-          <h2>OMARCO É GOSTOSO E O RAFA CONRODA Movimento de um corpo sob a influência exclusiva da gravidade, sem resistência do ar.</h2>
+          <h2>Movimento de um corpo sob a influência exclusiva da gravidade, sem resistência do ar.</h2>
         </div>
 
         <div class="teacher-name">
@@ -175,11 +175,49 @@
     
 
     <section id="gravity" class="gravity">
-
-    </section>
-
-
+      <div class="img-apple-newton">
+        <img src="./src/apple-newton.gif" alt="">
+      </div>
+      <h2 class="topic">
+          <span>A</span><span>c</span><span>e</span><span>l</span><span>e</span><span>r</span><span>a</span><span>ç</span><span>ã</span><span>o</span>
+          <span>d</span><span>a</span>
+          <span>G</span><span>r</span><span>a</span><span>v</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
+          <span>(</span><span>g</span><span>)</span>
+      </h2>
+      <div class="gravity-container">
+      <p class="text-gravity">
+          A aceleração da gravidade (g) é uma constante que representa a intensidade da força gravitacional na superfície da Terra.
+          Seu valor médio é aproximadamente 9,8 m/s². Isso significa que qualquer objeto em queda livre
+          acelera em 9,8 metros por segundo a cada segundo.
+      </p>
+      <p class="text-gravity">
+          Esse conceito foi estudado por cientistas como Galileu Galilei e Isaac Newton. Galileu demonstrou que
+          todos os objetos caem com a mesma aceleração, independentemente de sua massa (desconsiderando a resistência do ar).
+          Newton, por sua vez, formulou a Lei da Gravitação Universal, que descreve a força que os corpos exercem uns sobre os outros.
+      </p>
+    </div>
+  
+      <div class="simulation">
+          <h3>⚡ Simulação: Queda de um objeto ⚡</h3>
+          <label id="gravity-label" for="gravity-input">Altura inicial (m):</label>
+          <input id="gravity-input" type="number" value="10" min="1" max="100">
+          <button id="gravity-btn" onclick="iniciarQueda()">Soltar Objeto</button>
+          <div class="fall-area">
+              <div class="box" id="object"></div>
+          </div>
+          
+          <p id="result"></p>
+      </div>
+  </section>
+  
 
   
-</body>
+</body>  
 </html>
+
+
+
+
+
+
+
