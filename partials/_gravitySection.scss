@@ -1,33 +1,37 @@
 .gravity {
     min-height: 100vh;
-    
-    margin: 20px auto;
     background: white;
     padding: 20px;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 40px;
-    border-radius: 10px;
-    background: url(../src/earth.jpg);
+    position: relative; /* Garantir o posicionamento relativo */
+    overflow: hidden;  /* Para evitar que elementos saiam do contêiner */
+    background: linear-gradient(to bottom, #180E07, rgb(150,150,150));
+    filter: grayscale(10%);
+    z-index: -1;
+   
 }
 
-.gravity-container{
+.gravity-container {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background-color: transparent;
 }
+
 
 .text-gravity {
     font-size: 18px;
-    color: #555;
+    color: #ffffff;
     text-align: justify;
     font-family: "Poppins";
     font-weight: 300;
     width: 370px;
     height: 330px;
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,7 +41,6 @@
 
 .simulation {
     text-align: center;
-    margin-top: 20px;
 }
 
 #gravity-label {
@@ -66,7 +69,7 @@
     padding: 10px 20px;
     font-size: 16px;
     color: white;
-    background-color: #28a745;
+    background-color: #3a0074;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -74,23 +77,23 @@
 
 /* Correção do seletor */
 #gravity-btn:hover {
-    background-color: #218838;
+    background-color: #503864;
 }
 
 .fall-area {
     position: relative;
-    height: 300px; /* Altura fixa para referência */
+    height: 200px; /* Altura fixa para referência */
     width: 100px;
     margin: 20px auto;
-    border: 2px dashed gray;
+    // border: 2px dashed rgb(0, 0, 0);
 }
 
 .box {
     position: absolute;
     width: 50px;
     height: 50px;
-    background-color: #ff5733;
-    border-radius: 10px;
+    background-color: #c03333;
+    border-radius: 50%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -100,10 +103,11 @@
 #gravity h2{
     font-family: "Delicious Handrawn";
     text-shadow:
-      -2px -2px 0 red,  /* Primeira borda (preta) */
-       2px -2px 0 red,
-      -2px  2px 0 red,
-       2px  2px 0 red,
+      -2px -2px 0 rgb(0, 0, 0),  /* Primeira borda (preta) */
+       2px -2px 0 rgb(0, 0, 0),
+      -2px  2px 0 rgb(0, 0, 0),
+       2px  2px 0 #c03333;
+       
   }
 
 
@@ -114,7 +118,7 @@
     display: inline-block;
     animation: flutuarSuave 4s ease-in-out infinite;
     font-family: "Delicious Handrawn";
-    color: #218838;
+    color: #3a0074;
 }
 
 /* Animação de flutuação suave */
@@ -158,3 +162,5 @@
   .text-gravity:hover {
     transform: scale(1.1);
   }
+
+  
