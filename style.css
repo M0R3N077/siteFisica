@@ -408,6 +408,7 @@ li {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding-top: 30px;
   color: white;
+  z-index: 9999;
 }
 
 .side-menu ul {
@@ -1198,7 +1199,7 @@ li {
 .differences {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-color: #f4f4f4;
+  background: linear-gradient(to bottom, rgb(150, 150, 150), black);
   min-height: 100vh;
   padding-top: 30px;
 }
@@ -1207,7 +1208,7 @@ li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .company {
@@ -1216,11 +1217,18 @@ li {
 }
 
 .topic-differences {
-  background: yellow;
+  background: #ccc;
   padding: 10px;
   margin: 10px 0;
   border-radius: 5px;
+  color: rgb(0, 0, 0);
   transition: transform 0.3s ease, background 0.3s ease;
+  min-height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 2px 1px black;
+  font-size: 20px;
 }
 
 .topic-differences:hover {
@@ -1229,8 +1237,67 @@ li {
 }
 
 #vs {
-  font-size: 24px;
+  font-size: 40px;
   font-weight: bold;
+  color: #ccc;
+  text-shadow: 5px black;
+}
+
+.air-influency {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, black, #ccc);
+}
+
+.air-influency h2 {
+  margin-left: 40px;
+}
+
+#sub-influency {
+  color: white;
+}
+
+.influency-container {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.imgs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.imgs img {
+  max-width: 300px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.imgs img:hover {
+  transform: scale(1.1);
+}
+
+.text-influency {
+  margin-top: 40px;
+  max-width: 570px;
+  text-align: center;
+  font-size: 17px;
+  background-color: #ccc;
+  border-radius: 15px;
+  padding: 15px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.text-influency:hover {
+  transform: scale(1.1);
 }
 
 .poppins-thin {
