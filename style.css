@@ -980,7 +980,6 @@ li {
   overflow: hidden; /* Para evitar que elementos saiam do contêiner */
   background: linear-gradient(to bottom, #180E07, rgb(150, 150, 150));
   filter: grayscale(10%);
-  z-index: -1;
 }
 
 .gravity-container {
@@ -1194,6 +1193,44 @@ li {
 
 .text-gravity:hover {
   transform: scale(1.1);
+}
+
+.differences {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+  padding-top: 30px;
+}
+
+#companies {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.company {
+  width: 40%;
+  padding: 10px;
+}
+
+.topic-differences {
+  background: yellow;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.topic-differences:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+#vs {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .poppins-thin {
