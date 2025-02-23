@@ -102,3 +102,55 @@
       transform: translateY(0);
     }
   }
+
+
+  /* Para telas menores que 1024px */
+@media (max-width: 1024px) {
+  .galileu-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .text-galileu {
+    max-width: 80%;
+  }
+}
+
+/* Para telas menores que 768px */
+@media (max-width: 768px) {
+  .galileu {
+    padding: 10px;
+  }
+
+  #galileu-title {
+    font-size: 3rem;
+    letter-spacing: 2px;
+  }
+
+  .text-galileu {
+    padding: 10px;
+    font-size: 24px;
+    max-width: 90%;
+  }
+
+  .text-galileu:hover {
+    transform: scale(1.1);
+  }
+}
+
+/* Para telas menores que 480px */
+@media (max-width: 480px) {
+  #galileu-title {
+    font-size: 2.9rem;
+  }
+
+  .text-galileu {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .galileu-container {
+    gap: 10px;
+  }
+}

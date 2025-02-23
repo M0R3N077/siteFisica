@@ -12,10 +12,13 @@
 
 #sub-influency{
     color: white;
+    font-family:"Poppins";
+    font-weight: 300;
+    margin-top:20px;
 }
 
 .influency-container{
-    margin-top: 60px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -41,7 +44,9 @@
 }
 
 .text-influency {
-    margin-top: 40px;
+    font-family:"Poppins";
+    font-weight: 300;
+    margin-top: 10px;
     max-width: 570px;
     text-align: center;
     font-size: 17px;
@@ -53,4 +58,99 @@
 
 .text-influency:hover{
     transform: scale(1.1);
+}
+
+#title-influency span {
+    margin-top:70px;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+    animation: flutuarSuave 4s ease-in-out infinite;
+    font-family: "Delicious Handrawn";
+    color: #4c8fea;
+    text-shadow:
+      -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
+}
+
+/* Animação de flutuação suave */
+@keyframes flutuarSuave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Ajuste para uma leve flutuação */
+    100% { transform: translateY(0); }
+}
+
+/* Atraso progressivo para efeito de onda */
+ #title-influency span:nth-child(1) { animation-delay: 0s; }
+ #title-influency span:nth-child(2) { animation-delay: 0.1s; }
+ #title-influency span:nth-child(3) { animation-delay: 0.2s; }
+ #title-influency span:nth-child(4) { animation-delay: 0.3s; }
+ #title-influency span:nth-child(5) { animation-delay: 0.4s; }
+ #title-influency span:nth-child(6) { animation-delay: 0.5s; }
+ #title-influency span:nth-child(7) { animation-delay: 0.6s; }
+ #title-influency span:nth-child(8) { animation-delay: 0.7s; }
+ #title-influency span:nth-child(9) { animation-delay: 0.8s; }
+ #title-influency span:nth-child(10) { animation-delay: 0.9s; }
+
+ /* Para telas menores que 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+    .imgs {
+        text-align: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .imgs img {
+        max-width: 60%; /* Ajusta a largura das imagens */
+    }
+
+    #sub-influency {
+        font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
+    }
+
+    .text-influency {
+        max-width: 90%; /* Ajusta a largura máxima do texto */
+        font-size: 16px; /* Reduz o tamanho da fonte do texto */
+    }
+}
+
+/* Para telas menores que 768px (celulares grandes e tablets pequenos) */
+@media (max-width: 768px) {
+    #title-influency {
+        font-size: 24px; /* Reduz o tamanho do título principal */
+    }
+
+    #sub-influency {
+        font-size: 16px; /* Reduz ainda mais o tamanho da fonte do subtítulo */
+    }
+
+    .text-influency {
+        padding: 10px; /* Reduz o padding do texto */
+    }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media (max-width: 480px) {
+    #title-influency {
+        font-size: 20px; /* Tamanho do título principal para telas pequenas */
+    }
+
+    #sub-influency {
+        font-size: 14px; /* Tamanho do subtítulo para telas pequenas */
+    }
+
+    .text-influency {
+        font-size: 14px; /* Tamanho da fonte do texto para telas pequenas */
+        padding: 8px; /* Ajuste do padding */
+    }
+
+    .imgs img {
+        max-width: 100%; /* Imagens ocupam 100% da largura */
+    }
 }

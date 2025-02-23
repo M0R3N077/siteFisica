@@ -1,5 +1,4 @@
 .differences {
-    font-family: Arial, sans-serif;
     text-align: center;
     background: linear-gradient(to bottom, rgb(150,150,150), black);
     min-height: 100vh;
@@ -29,14 +28,153 @@
     align-items: center;
     box-shadow: 3px 2px 1px black;
     font-size: 20px;
+    font-family:"Poppins";
+    font-weight: 300;
 }
 .topic-differences:hover {
-    background: orange;
-    transform: scale(1.05);
+    transform: scale(1.06);
 }
 #vs {
     font-size: 40px;
     font-weight: bold;
-    color:#ccc;
-    text-shadow: 5px black;
+    color: red;
+    text-shadow:
+      -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
 }
+
+
+#subtitle-diffence{
+    font-family: "Delicious Handrawn", serif;
+    letter-spacing:6px;
+    font-size:30px;
+    color: #ccc;
+    text-shadow:
+    -2px -2px 0 black,  /* Primeira borda (preta) */
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black,
+}
+
+#title-differences {
+    font-family: "Delicious Handrawn", serif;
+    color: red;
+    letter-spacing: 4px;
+    text-shadow:
+    -2px -2px 0 black,  /* Primeira borda (preta) */
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black,
+    -4px -4px 0 white,  /* Segunda borda (branca) */
+     4px -4px 0 white,
+    -4px  4px 0 white,
+     4px  4px 0 white;
+  }
+  
+
+
+#title-differences span {
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+    animation: flutuarSuave 4s ease-in-out infinite;
+    font-family: "Delicious Handrawn";
+    color: red;
+}
+
+/* Animação de flutuação suave */
+@keyframes flutuarSuave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Ajuste para uma leve flutuação */
+    100% { transform: translateY(0); }
+}
+
+/* Atraso progressivo para efeito de onda */
+#title-differences span:nth-child(1) { animation-delay: 0s; }
+#title-differences span:nth-child(2) { animation-delay: 0.1s; }
+#title-differences span:nth-child(3) { animation-delay: 0.2s; }
+#title-differences span:nth-child(4) { animation-delay: 0.3s; }
+#title-differences span:nth-child(5) { animation-delay: 0.4s; }
+#title-differences span:nth-child(6) { animation-delay: 0.5s; }
+#title-differences span:nth-child(7) { animation-delay: 0.6s; }
+#title-differences span:nth-child(8) { animation-delay: 0.7s; }
+#title-differences span:nth-child(9) { animation-delay: 0.8s; }
+#title-differences span:nth-child(10) { animation-delay: 0.9s; }
+
+
+/* Para telas menores que 1024px (tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+    #companies {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .company {
+        width: 80%;
+    }
+
+    #vs {
+        font-size: 35px;
+    }
+}
+
+/* Para telas menores que 768px (celulares grandes e tablets pequenos) */
+@media (max-width: 768px) {
+    .company {
+        width: 90%;
+    }
+
+    .topic-differences {
+        font-size: 18px;
+        padding: 8px;
+    }
+
+    #subtitle-diffence {
+        font-size: 24px;
+        letter-spacing: 3px;
+    }
+
+    #vs {
+        font-size: 30px;
+    }
+}
+
+/* Para telas menores que 480px (smartphones pequenos) */
+@media (max-width: 480px) {
+    .differences {
+        padding-top: 20px;
+    }
+
+    #title-differences {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .company {
+        width: 100%;
+    }
+
+    .topic-differences {
+        font-size: 16px;
+        padding: 6px;
+        min-height: 60px;
+    }
+
+    #subtitle-diffence {
+        font-size: 20px;
+    }
+
+    #vs {
+        font-size: 25px;
+    }
+}
+
+
+  
+  

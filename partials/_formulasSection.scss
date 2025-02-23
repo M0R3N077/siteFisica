@@ -149,3 +149,69 @@
 .roxo:nth-child(10) { animation-delay: 0.9s; }
 .roxo:nth-child(11) { animation-delay: 1s; }
 .roxo:nth-child(12) { animation-delay: 1.1s; }
+
+
+/* Ajustes para telas menores que 1200px */
+@media (max-width: 1200px) {
+    .gif-newton img {
+        margin-left: 400px;
+        height: 150px;
+    }
+    
+    .formulas-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas */
+    }
+}
+
+/* Ajustes para tablets (telas menores que 992px) */
+@media (max-width: 992px) {
+    .gif-newton img {
+        margin-left: 100px;
+        margin-bottom: 400px;
+        height: 130px;
+    }
+    .formulas-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+        gap: 20px;
+    }
+    .topic h2 {
+        font-size: 50px;
+    }
+}
+
+/* Ajustes para celulares grandes (telas menores que 768px) */
+@media (max-width: 768px) {
+    .gif-newton img {
+        position: relative;
+        margin: 0 auto;
+        display: block;
+        height: 100px;
+    }
+    .formulas-grid {
+        grid-template-columns: 1fr; /* 1 coluna */
+        gap: 15px;
+    }
+    .topic h2 {
+        font-size: 40px;
+    }
+    .formula-item {
+        max-width: 100%;
+        min-height: auto;
+    }
+}
+
+/* Ajustes para celulares pequenos (telas menores que 480px) */
+@media (max-width: 480px) {
+    .topic h2 {
+        font-size: 30px;
+    }
+    .formulas {
+        padding: 30px 10px;
+    }
+    .formula-item h3 {
+        font-size: 16px;
+    }
+    .formula-item li {
+        font-size: 12px;
+    }
+}

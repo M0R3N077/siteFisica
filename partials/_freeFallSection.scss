@@ -3,8 +3,6 @@
     position: relative;
     overflow: hidden;
     min-height: 100vh;
-    // background-image: linear-gradient(to bottom, rgb(255, 255, 255), rgb(129, 106, 62), rgb(253, 105, 0), rgb(255, 115, 0));
-    // background-color: rgb(52, 52, 52);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,6 +141,83 @@
       font-weight: weight;
       font-style: normal;
     }
+
+    /* Telas menores que 1200px (Notebooks médios) */
+@media (max-width: 1200px) {
+  #firstTopic {
+      margin-right: 700px;
+      padding-bottom: 400px;
+  }
+  .text-free-fall {
+      width: 450px;
+      margin-right: 200px;
+  }
+  .img-free-fall {
+      margin-left: 500px;
+  }
+}
+
+/* Telas menores que 1024px (Tablets e notebooks pequenos) */
+@media (max-width: 1024px) {
+  #firstTopic {
+      margin-right: 500px;
+  }
+  .text-free-fall {
+      width: 400px;
+      margin-right: 150px;
+  }
+  .img-free-fall {
+      margin-left: 300px;
+  }
+}
+
+/* Telas menores que 768px (Tablets e celulares grandes) */
+@media (max-width: 768px) {
+  .free-fall {
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+  }
+  #firstTopic {
+      margin: 0;
+  }
+  #firstTopic h2 {
+      font-size: 50px;
+  }
+  #segundoH2 {
+      font-size: 28px;
+  }
+  .text-free-fall {
+      width: 90%;
+      margin: 20px auto;
+      font-size: 14px;
+      padding: 15px;
+  }
+  .img-free-fall {
+      margin: 0 auto;
+  }
+  .img-free-fall img {
+      max-width: 300px;
+  }
+}
+
+/* Telas menores que 480px (Celulares pequenos) */
+@media (max-width: 480px) {
+  #firstTopic h2 {
+      font-size: 40px;
+  }
+  #segundoH2 {
+      font-size: 24px;
+  }
+  .text-free-fall {
+      font-size: 12px;
+      padding: 10px;
+  }
+  .img-free-fall img {
+      max-width: 250px;
+  }
+}
+
 
 
   

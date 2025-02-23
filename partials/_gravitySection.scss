@@ -162,4 +162,62 @@
     transform: scale(1.1);
   }
 
+
+  /* Telas menores (até 768px) */
+@media (max-width: 768px) {
+    .gravity-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .text-gravity {
+        width: 90%;
+        height: auto;
+        font-size: 16px;
+    }
+
+    .img-apple-newton {
+        position: relative;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-apple-newton img {
+        width: 150px;
+    }
+
+    .fall-area {
+        height: 150px;
+    }
+}
+
+/* Telas muito pequenas (até 480px) */
+@media (max-width: 480px) {
+    .topic {
+        font-size: 20px;
+    }
+
+    .text-gravity {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    #gravity-btn {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .fall-area {
+        height: 120px;
+    }
+
+    .box {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
   

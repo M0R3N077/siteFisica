@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -212,10 +213,12 @@
   </section>
 
   <section class="differences">
-      <h2 class="topic" id="title-differences">DIFERENÇAS</h2>
+    <h2 id="title-differences" class="topic">
+      <span>D</span><span>I</span><span>F</span><span>E</span><span>R</span><span>E</span><span>N</span><span>Ç</span><span>A</span><span>S</span>
+    </h2>    
       <div id="companies">
           <div class="company" id="company-a">
-              <h3>MOVIMENTO DE QUEDA LIVRE</h3>
+              <h3 id="subtitle-diffence">MOVIMENTO DE QUEDA LIVRE</h3>
               <div class="topic-differences" id="topic-a1">O objeto se move apenas para baixo, sob ação exclusiva da gravidade.</div>
               <div class="topic-differences" id="topic-a2">A velocidade inicial é zero.</div>
               <div class="topic-differences" id="topic-a3">A aceleração é sempre a gravidade (aproximadamente 9,8m/s²), atuando para baixo.</div>
@@ -223,7 +226,7 @@
           </div>
           <div id="vs">VS</div>
           <div class="company" id="company-b">
-              <h3>LANÇAMENTO DE OBETOS VERTICALMENTE</h3>
+              <h3 id="subtitle-diffence">LANÇAMENTO DE OBETOS VERTICALMENTE</h3>
               <div class="topic-differences" id="topic-b1">O objeto pode subir antes de descer, pois recebe uma velocidade inicial para cima.</div>
               <div class="topic-differences" id="topic-b2"> A velocidade inicial é diferente de zero e direcionada para cima.
               </div>
@@ -234,7 +237,13 @@
   </section>
 
   <section class="air-influency">
-    <h2 class="topic" id="title-influency">Influência da Resistência do Ar:</h2>
+    <h2 class="topic" id="title-influency">
+      <span>I</span><span>n</span><span>f</span><span>l</span><span>u</span><span>ê</span><span>n</span><span>c</span><span>i</span><span>a</span>
+      <span>d</span><span>a</span>
+      <span>R</span><span>e</span><span>s</span><span>i</span><span>s</span><span>t</span><span>ê</span><span>n</span><span>c</span><span>i</span><span>a</span>
+      <span>d</span><span>o</span>
+      <span>A</span><span>r</span>
+  </h2>
     <h2 class="subititle" id="sub-influency">Como a presença do ar afeta a velocidade e a aceleração de objetos em queda.</h2>
     <div class="influency-container">
     <div class="imgs">
@@ -250,9 +259,171 @@
     </div>
   </div>
   </section>
+
+  <section class="aplications-section">
+    <h2 class="topic" id="title-aplications">
+      <span>A</span><span>p</span><span>l</span><span>i</span><span>c</span><span>a</span><span>ç</span><span>õ</span><span>e</span><span>s</span>
+      <span>P</span><span>r</span><span>á</span><span>t</span><span>i</span><span>c</span><span>a</span><span>s</span>
+      <span>d</span><span>a</span>
+      <span>Q</span><span>u</span><span>e</span><span>d</span><span>a</span>
+      <span>L</span><span>i</span><span>v</span><span>r</span><span>e</span>
+  </h2>
+    <h2 id="sub-aplications">Como esse conceito é aplicado no mundo real</h2>
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <h3>1. Engenharia e Construção Civil</h3>
+                <br>
+                <h4><strong>Projetos de Elevadores:</strong></h4>
+                <p>Cálculo da aceleração e sistemas de frenagem para segurança de passageiros.</p>
+                <img src="./src/aplications/elevator.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>1. Engenharia e Construção Civil</h3>
+              <br>
+              <h4><strong>Resistência de Materiais:</strong></h4>
+              <p>Testes de impacto em estruturas para avaliar resistência a quedas e colisões.</p>
+              <img src="./src/aplications/resistance.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>1. Engenharia e Construção Civil</h3>
+              <br>
+              <h4><strong>Dinâmica de Pontes e Viadutos:</strong></h4>
+              <p>Análise de objetos que podem cair de grandes alturas, como ferramentas de trabalhadores.</p>
+              <img src="./src/aplications/bridge.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>2. Esportes e Entretenimento</h3>
+              <br>
+              <h4><strong>Paraquedismo e Base Jump:</strong></h4>
+              <p>Cálculo da aceleração e resistência do ar para determinar trajetórias seguras.</p>
+              <img src="./src/aplications/jump.jpeg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>2. Esportes e Entretenimento</h3>
+              <br>
+              <h4><strong>Mergulho de Penhasco (Cliff Diving):</strong></h4>
+              <p>Previsão do tempo de queda e impacto na água para evitar lesões.</p>
+              <img src="./src/aplications/cliff-diving.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>2. Esportes e Entretenimento</h3>
+              <br>
+              <h4><strong>Salto com Vara e Ginástica Olímpica:</strong></h4>
+              <p>Estudo das forças atuantes durante a queda após o ápice do salto.</p>
+              <img src="./src/aplications/pole-vault.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>3. Segurança e Investigação</h3>
+              <br>
+              <h4><strong>Acidentes Automobilísticos:</strong></h4>
+              <p>Análise da trajetória de corpos em colisões e quedas para reconstituição de acidentes.</p>
+              <img src="./src/aplications/accidents.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>3. Segurança e Investigação</h3>
+              <br>
+              <h4><strong>Criminalística e Forense:</strong></h4>
+              <p>Cálculo da altura de uma queda para determinar causas de mortes.</p>
+              <img src="./src/aplications/forensic.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>3. Segurança e Investigação</h3>
+              <br>
+              <h4><strong>Testes de Airbags e Sistemas de Segurança:</strong></h4>
+              <p>Simulação de quedas para aprimorar tecnologias de proteção.</p>
+              <img src="./src/aplications/airbag.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>4. Ciências e Pesquisa</h3>
+              <br>
+              <h4><strong>Experimentos em Física:</strong></h4>
+              <p>Testes para validar a teoria da gravidade e medir a aceleração gravitacional local.</p>
+              <img src="./src/aplications/test.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>4. Ciências e Pesquisa</h3>
+              <br>
+              <h4><strong>Estudos Astronômicos:</strong></h4>
+              <p>Cálculo da queda livre em diferentes corpos celestes, como na Lua e em Marte.</p>
+              <img src="./src/aplications/planets.png" alt="">
+            </div>
+            <div class="swiper-slide">
+              <h3>4. Ciências e Pesquisa</h3>
+              <br>
+              <h4><strong>Desenvolvimento Aeroespacial:</strong></h4>
+              <p>Testes de reentrada de espaçonaves e queda de sondas em planetas.</p>
+              <img src="./src/aplications/aerospace.jpg" alt="">
+            </div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <section id="free-fall-different-planets" class="free-fall-different-planets-section">
+    <h2>Queda livre em diferentes planetas:</h2>
+    <b>"Como a variação da gravidade em outros corpos celestes afeta o movimento de queda"</b>
+    <div class="free-fall-different-planets-container">
+      <!-- Card 1: Suítes Exclusivas -->
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/moon.png" alt="Pet em suíte exclusiva">
+        <h3>🌙 Lua</h3>
+        <p>Com uma gravidade bem menor, de 1.62 m/s², um objeto leva cerca de 3.52 segundos para cair a mesma altura.</p>
+      </div>
   
+      <!-- Card 2: Recreação e Lazer -->
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/mars.png" alt="Pets brincando em área externa">
+        <h3>🔴 Marte</h3>
+        <p>A gravidade marciana é de 3.72 m/s², então o tempo de queda de 10 metros é aproximadamente 2.32 segundos.</p>
+      </div>
+  
+      <!-- Card 3: Alimentação Balanceada -->
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/mercury.png" alt="Comida saudável para pets">
+        <h3>🟠 Mercúrio</h3>
+        <p>Com gravidade similar à de Marte, 3.70 m/s², o tempo de queda é cerca de 2.33 segundos.</p>
+      </div>
+
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/venus.jpg" alt="Comida saudável para pets">
+        <h3>🟡 Vênus</h3>
+        <p>A gravidade venusiana é de 8.87 m/s², resultando em um tempo de queda de 1.50 segundos.</p>
+      </div>
+
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/jupiter.jpg" alt="Comida saudável para pets">
+        <h3>🟤 Júpiter</h3>
+        <p>O maior planeta do Sistema Solar tem uma gravidade intensa de 24.79 m/s², então um objeto cai em 0.90 segundos.</p>
+      </div>
+
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/saturn.jpg" alt="Comida saudável para pets">
+        <h3>⚫ Saturno</h3>
+        <p>Com 10.44 m/s² de gravidade, um objeto cairia em 1.39 segundos.</p>
+      </div>
+
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/uranus.png" alt="Comida saudável para pets">
+        <h3>🟢 Urano</h3>
+        <p>A gravidade de 8.69 m/s² faz com que um objeto leve 1.52 segundos para cair.</p>
+      </div>
+
+      <div class="free-fall-different-planets-card">
+        <img src="./src/freeFallDifferentPlanets/neptune.png" alt="Comida saudável para pets">
+        <h3>🔵 Netuno</h3>
+        <p>Sua gravidade de 11.15 m/s² faz um objeto cair em 1.35 segundos.</p>
+      </div>
+    </div>
+  </section>
 
   
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>  
 </html>
 

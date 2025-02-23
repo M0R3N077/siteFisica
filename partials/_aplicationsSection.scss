@@ -1,0 +1,163 @@
+.aplications-section {
+    font-family: "Poppins";
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, #ccc, #180E07);
+}
+
+.title-aplications {
+    font-size: 28px;
+    color: #333;
+}
+
+#sub-aplications {
+    font-size: 22px;
+    color: #555;
+    font-family: "Poppins";
+    font-weight: 300;
+}
+
+.swiper {
+    margin-top:60px;
+    width: 90%;
+    height: 350px;
+}
+
+.swiper-slide {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-slide img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.swiper-slide h3 {
+    font-size: 20px;
+    color: #333;
+}
+
+.swiper-slide p {
+    font-size: 16px;
+    color: #666;
+}
+
+.swiper-button-next, 
+        .swiper-button-prev {
+        color: #fffefe !important; /* Cor das stas */
+        width: 57px !important;
+        height: 57px !important;
+        background-color: #3a0074;
+        opacity: 85%;
+        border-radius: 50%;
+        border: solid 1px rgb(255, 255, 255);
+        box-shadow: 0 5px 15px black;
+        font-size: 5px !important;
+        }
+
+#title-aplications span {
+    letter-spacing: 5px;
+    position: relative;
+    display: inline-block;
+    animation: flutuarSuave 4s ease-in-out infinite;
+    font-family: "Delicious Handrawn";
+    color: #3a0074;
+}
+
+@keyframes flutuarSuave {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+#title-aplications span:nth-child(1) { animation-delay: 0s; }
+#title-aplications span:nth-child(2) { animation-delay: 0.1s; }
+#title-aplications span:nth-child(3) { animation-delay: 0.2s; }
+#title-aplications span:nth-child(4) { animation-delay: 0.3s; }
+#title-aplications span:nth-child(5) { animation-delay: 0.4s; }
+#title-aplications span:nth-child(6) { animation-delay: 0.5s; }
+#title-aplications span:nth-child(7) { animation-delay: 0.6s; }
+#title-aplications span:nth-child(8) { animation-delay: 0.7s; }
+#title-aplications span:nth-child(9) { animation-delay: 0.8s; }
+#title-aplications span:nth-child(10) { animation-delay: 0.9s; }
+#title-aplications span:nth-child(11) { animation-delay: 1s; }
+#title-aplications span:nth-child(12) { animation-delay: 1.1s; }
+#title-aplications span:nth-child(13) { animation-delay: 1.2s; }
+#title-aplications span:nth-child(14) { animation-delay: 1.3s; }
+#title-aplications span:nth-child(15) { animation-delay: 1.4s; }
+#title-aplications span:nth-child(16) { animation-delay: 1.5s; }
+#title-aplications span:nth-child(17) { animation-delay: 1.6s; }
+#title-aplications span:nth-child(18) { animation-delay: 1.7s; }
+#title-aplications span:nth-child(19) { animation-delay: 1.8s; }
+#title-aplications span:nth-child(20) { animation-delay: 1.9s; }
+#title-aplications span:nth-child(21) { animation-delay: 2s; }
+#title-aplications span:nth-child(22) { animation-delay: 2.1s; }
+#title-aplications span:nth-child(23) { animation-delay: 2.2s; }
+#title-aplications span:nth-child(24) { animation-delay: 2.3s; }
+#title-aplications span:nth-child(25) { animation-delay: 2.4s; }
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    .aplications-section {
+        padding: 20px;
+    }
+
+    #title-aplications {
+        font-size: 24px; /* Reduz o tamanho da fonte */
+    }
+
+    #sub-aplications {
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .swiper {
+        height: auto; /* Permite que a altura da swiper se ajuste ao conteúdo */
+    }
+
+    .swiper-slide {
+        padding: 10px; /* Menos padding nas slides */
+    }
+
+    .swiper-slide h3 {
+        font-size: 18px; /* Reduz o tamanho da fonte */
+    }
+
+    .swiper-slide p {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px; /* Ajusta a largura dos botões */
+        height: 40px; /* Ajusta a altura dos botões */
+    }
+}
+
+/* Para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    #title-aplications {
+        font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    #sub-aplications {
+        font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .swiper-slide img {
+        height: 120px; /* Ajusta a altura da imagem */
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 35px; /* Ajusta a largura dos botões */
+        height: 35px; /* Ajusta a altura dos botões */
+        font-size: 4px !important; /* Ajusta o tamanho da fonte dos botões */
+    }
+}
+
+

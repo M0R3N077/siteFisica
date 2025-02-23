@@ -1,0 +1,139 @@
+.free-fall-different-planets-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('../src/freeFallDifferentPlanets/space.jpg') no-repeat center/cover;
+    filter: grayscale(30%);
+  }
+  
+  .free-fall-different-planets-section h2 {
+    font-size: 36px;
+    color: #A7C957;
+  }
+  
+  .free-fall-different-planets-section b {
+    font-size: 18px;
+    color: #555;
+  }
+  
+  .free-fall-different-planets-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .free-fall-different-planets-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .free-fall-different-planets-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .free-fall-different-planets-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .free-fall-different-planets-card h3 {
+    font-size: 22px;
+    color: #A7C957;
+    margin: 15px 0;
+  }
+  
+  .free-fall-different-planets-card p {
+    font-size: 16px;
+    color: #555;
+    padding: 0 15px 20px;
+  }
+  
+  .hospedagem-destaque {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+    padding: 20px;
+  }
+  
+  .hospedagem-destaque img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  
+  /* Para telas pequenas (até 480px) */
+@media (max-width: 480px) {
+  .free-fall-different-planets-section {
+      padding: 30px 10px;
+  }
+
+  .free-fall-different-planets-section h2 {
+      font-size: 28px;
+  }
+
+  .free-fall-different-planets-section b {
+      font-size: 16px;
+  }
+
+  .free-fall-different-planets-card {
+      max-width: 90%;
+  }
+
+  .free-fall-different-planets-card h3 {
+      font-size: 20px;
+  }
+
+  .free-fall-different-planets-card p {
+      font-size: 14px;
+  }
+}
+
+/* Para telas médias (até 768px) */
+@media (max-width: 768px) {
+  .free-fall-different-planets-section {
+      padding: 40px 15px;
+  }
+
+  .free-fall-different-planets-section h2 {
+      font-size: 32px;
+  }
+
+  .free-fall-different-planets-card {
+      max-width: 45%;
+  }
+
+  .free-fall-different-planets-card h3 {
+      font-size: 21px;
+  }
+
+  .free-fall-different-planets-card p {
+      font-size: 15px;
+  }
+}
+
+/* Para telas grandes (até 1200px) */
+@media (max-width: 1200px) {
+  .free-fall-different-planets-section {
+      padding: 50px 20px;
+  }
+
+  .free-fall-different-planets-card {
+      max-width: 30%;
+  }
+
+  .free-fall-different-planets-card h3 {
+      font-size: 22px;
+  }
+}
+
