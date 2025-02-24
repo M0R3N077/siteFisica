@@ -84,7 +84,7 @@
 
 /* Efeitos ao passar o mouse */
 .formula-item:hover {
-    transform: scale(1.05) rotateY(0);
+    transform: scale(1.05) rotateY(0) !important;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -116,11 +116,16 @@
     animation: flutuarSuave 4s ease-in-out infinite,  
     brilhoPulsante 2.5s ease-in-out infinite alternate;
     color: #5019b6; 
-    text-shadow: 
-        -2px -2px 0 black,  
-         2px -2px 0 black,  
-        -2px  2px 0 black,  
-         2px  2px 0 black; /* Borda preta */
+        text-shadow:
+      -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
+         
 }
 
 /* Flutuação mais fluida e natural */
@@ -185,25 +190,28 @@
         position: relative;
         margin: 0 auto;
         display: block;
-        height: 100px;
+        height: 150px;
     }
     .formulas-grid {
         grid-template-columns: 1fr; /* 1 coluna */
         gap: 15px;
+        margin-top: 20px;
     }
     .topic h2 {
-        font-size: 40px;
+        font-size: 70px;
     }
     .formula-item {
-        max-width: 100%;
+        align-items: center;
+        max-width: 80%;
         min-height: auto;
+        margin: auto;
     }
 }
 
 /* Ajustes para celulares pequenos (telas menores que 480px) */
 @media (max-width: 480px) {
     .topic h2 {
-        font-size: 30px;
+        font-size: 45px;
     }
     .formulas {
         padding: 30px 10px;

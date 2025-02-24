@@ -15,38 +15,22 @@ window.addEventListener('scroll', function(){
 
 })
 
-
+AOS.init();
 
 //menu
 function toggleMenu() {
-    const sideMenu = document.getElementById('side-menu'); // Obtém o menu lateral
+    const sideMenu = document.getElementById('side-menu');
+    const overlay = document.getElementById('menu-overlay');
+    const header = document.querySelector('.header');
+
     if (sideMenu.style.right === '-300px' || sideMenu.style.right === '') {
-        sideMenu.style.right = '0'; // Mostra o menu
+        sideMenu.style.right = '0'; // Abre o menu
+        overlay.classList.add('active'); // Exibe overlay
     } else {
-        sideMenu.style.right = '-300px'; // Esconde o menu
+        sideMenu.style.right = '-300px'; // Fecha o menu
+        overlay.classList.remove('active'); // Esconde overlay
     }
 }
-
-  // Adiciona os eventos de clique nos botões
-
-  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault(); // Impede o comportamento padrão do link
-
-      // Obtém o destino do link
-      const target = document.querySelector(this.getAttribute('href'));
-
-      // Calcula a posição do destino ajustada para o header fixo
-      const offset = 80;
-      const position = target.offsetTop - offset;
-
-      // Faz o scroll suave até o destino
-      window.scrollTo({
-        top: position,
-        behavior: 'smooth',
-      });
-    });
-  });
 
 
 
@@ -159,6 +143,39 @@ var swiper = new Swiper(".mySwiper", {
         el: ".swiper-pagination",
         clickable: true,
     },
+    breakpoints: {
+        100: { // Primeiro o menor
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        768: { // Depois o maior
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        1024: { // Depois o maior
+            slidesPerView: 3,
+            spaceBetween: 30,
+        }
+    },
 });
 
 
+// Adiciona os eventos de clique nos botões
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault(); // Impede o comportamento padrão do link
+
+      // Obtém o destino do link
+      const target = document.querySelector(this.getAttribute('href'));
+
+      // Calcula a posição do destino ajustada para o header fixo
+      const offset = 80;
+      const position = target.offsetTop - offset;
+
+      // Faz o scroll suave até o destino
+      window.scrollTo({
+        top: position,
+        behavior: 'smooth',
+      });
+    });
+  });

@@ -57,7 +57,7 @@
 }
 
 .text-influency:hover{
-    transform: scale(1.1);
+    transform: scale(1.1) !important;
 }
 
 #title-influency span {
@@ -67,7 +67,7 @@
     display: inline-block;
     animation: flutuarSuave 4s ease-in-out infinite;
     font-family: "Delicious Handrawn";
-    color: #4c8fea;
+    color: #764918;
     text-shadow:
       -2px -2px 0 black,  /* Primeira borda (preta) */
        2px -2px 0 black,
@@ -104,11 +104,12 @@
         text-align: center;
         flex-direction: column;
         gap: 20px;
+        width: 100%;
     }
 
-    .imgs img {
-        max-width: 60%; /* Ajusta a largura das imagens */
-    }
+    // .imgs img {
+    //     max-width: 30%; /* Ajusta a largura das imagens */
+    // }
 
     #sub-influency {
         font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
@@ -123,7 +124,7 @@
 /* Para telas menores que 768px (celulares grandes e tablets pequenos) */
 @media (max-width: 768px) {
     #title-influency {
-        font-size: 24px; /* Reduz o tamanho do título principal */
+        font-size: 54px; /* Reduz o tamanho do título principal */
     }
 
     #sub-influency {
@@ -138,7 +139,7 @@
 /* Para telas menores que 480px (smartphones pequenos) */
 @media (max-width: 480px) {
     #title-influency {
-        font-size: 20px; /* Tamanho do título principal para telas pequenas */
+        font-size: 40px; /* Tamanho do título principal para telas pequenas */
     }
 
     #sub-influency {
@@ -151,6 +152,7 @@
     }
 
     .imgs img {
-        max-width: 100%; /* Imagens ocupam 100% da largura */
+        width: 100%; /* Imagens ocupam 100% da largura */
     }
 }
+

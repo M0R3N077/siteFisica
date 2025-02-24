@@ -78,7 +78,7 @@
 }
 
 .text-free-fall:hover {
-    transform: scale(1.07);
+    transform: scale(1.07) !important;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
 }
 

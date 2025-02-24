@@ -2,6 +2,7 @@
 .header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -9,8 +10,10 @@
     padding: 15px 50px;
     background: transparent;
     mix-blend-mode: difference;
-    z-index: 10000;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9); /* Ajuste conforme necessário */
 }
+  
 
 .logo {
     font-weight: bold;
@@ -78,69 +81,23 @@
   border-radius: 20px; /* Aumenta o arredondamento no hover */
   }
   
-  /* Telas menores que 992px (Tablets e celulares grandes) */
-@media (max-width: 992px) {
-  .header {
-      padding: 15px 30px;
-  }
-  .logo img {
-      width: 80px;
-  }
-  .nav-links {
-      gap: 30px;
-  }
-  .nav-links a {
-      font-size: 18px;
-      padding: 6px 20px;
-  }
-  .menu-icon {
-      padding: 5px 14px;
-      font-size: 28px;
-  }
+@media(max-width: 480px){
+header{
+    justify-content: flex-start;
+    padding: 0;
 }
 
-/* Telas menores que 768px (Celulares médios e pequenos) */
-@media (max-width: 768px) {
-  .header {
-      padding: 15px 20px;
-  }
-  .nav-links {
-      display: none;
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      background: rgba(0, 0, 0, 0.9);
-      border-radius: 10px;
-      padding: 15px;
-      width: 180px;
-      text-align: center;
-  }
-  .nav-links a {
-      display: block;
-      margin: 10px 0;
-      font-size: 16px;
-      padding: 10px;
-  }
-  .menu-icon {
-      display: block;
-  }
+.nav-links{
+    gap: 10px;
+    align-items: center;
 }
 
-/* Telas menores que 480px (Celulares pequenos) */
-@media (max-width: 480px) {
-  .header {
-      padding: 10px 15px;
-  }
-  .logo img {
-      width: 70px;
-  }
-  .menu-icon {
-      font-size: 24px;
-      padding: 4px 12px;
-  }
+.nav-links a{
+    font-size: 10px;
+    padding: 5px 10px;
 }
 
-  
- 
-
+.logo img{
+    width: 60px;
+}
+}

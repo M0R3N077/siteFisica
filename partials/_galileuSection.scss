@@ -32,11 +32,12 @@
   }
 
   .text-galileu:hover{
-    transform: scale(1.2);
+    transform: scale(1.08) !important;
   }
 
 
   #galileu-title span {
+    color: #764918;
     position: relative;
     display: inline-block;
     letter-spacing: 6px;
@@ -142,7 +143,7 @@
 /* Para telas menores que 480px */
 @media (max-width: 480px) {
   #galileu-title {
-    font-size: 2.9rem;
+    font-size: 2.3rem;
   }
 
   .text-galileu {

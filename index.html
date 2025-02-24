@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 </head>
 <body>
 
@@ -24,19 +27,25 @@
       <li><a href="#content">Queda Livre: Conceito</a></li>
       <li><a href="#formulas">Fórmulas Fundamentais</a></li>
       <li><a href="#galileu">Experimentos de Galileu Galilei</a></li>
-      <li><a href="#quizzes">Quizzes</a></li>
-      <li><a href="#mensagens">Mensagens</a></li>
+      <li><a href="#gravity">Aceleração da Gravidade</a></li>
+      <li><a href="#differences">Diferenças</a></li>
+      <li><a href="#air-influency">Influência da Resistência do Ar</a></li>
+      <li><a href="#aplications-section">Aplicações Práticas</a></li>
+      <li><a href="#free-fall-different-planets">Queda Livre em Diferentes Planetas</a></li>
+      <li><a href="#about-us">Sobre Nós</a></li>
+
     </ul>
   </aside>
+  <!-- Fundo escuro quando o menu estiver aberto -->
+<div class="menu-overlay" id="menu-overlay"  onclick="toggleMenu()"></div>
     
     <header class="header">
-        <div class="logo"><img src="./src/logo.png" alt=""></div>
+        <div class="logo"><img src="./src/logo.png" alt="logo do site"></div>
         <nav class="nav-links">
             <a href="#hero-id">Início</a>
             <a href="#content">Teoria</a>
-            <a href="#">Pratica</a>
             <button class="menu-icon" onclick="toggleMenu()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
               </svg>
             </button>
@@ -46,17 +55,17 @@
     <section id="hero-id" class="hero-section">
         <div class="hero-overlay">
         <div class="title">
-          <div class="cssanimation leFlyInTop sequence">
+          <div class="cssanimation leFlyInTop sequence" data-aos="fade-up" >
             <span>Q</span><span>u</span><span>e</span><span>d</span><span>a</span> 
             <span>l</span><span>i</span><span>v</span><span>r</span><span>e</span><span>:</span>
           </div>
         </div>
 
-        <div class="subtitle">
+        <div class="subtitle" data-aos="fade-up">
           <h2>Movimento de um corpo sob a influência exclusiva da gravidade, sem resistência do ar.</h2>
         </div>
 
-        <div class="teacher-name">
+        <div class="teacher-name"data-aos="fade-up">
           <h3>
               <span>P</span><span>r</span><span>o</span><span>f</span><span>e</span><span>s</span><span>s</span><span>o</span><span>r</span><span>:</span> 
               <span>T</span><span>i</span><span>a</span><span>g</span><span>o</span> 
@@ -74,36 +83,36 @@
     </section>
 
     <section id="content" class="free-fall">
-      <div id="firstTopic" class="topic">
+      <div id="firstTopic" class="topic" data-aos="fade-up">
         <h2>Queda Livre:</h2>       
-        <h2 id="segundoH2">
+        <h2 id="segundoH2" data-aos="fade-up">
             <span>C</span><span>o</span><span>n</span><span>c</span><span>e</span><span>i</span><span>t</span><span>o</span>
         </h2>       
       </div>
       
         
-          <div class="text-free-fall">
+          <div class="text-free-fall"  data-aos="fade-up">
             <p>A queda livre acontece quando um objeto cai apenas por causa da força da gravidade, sem a interferência do ar ou de qualquer outra força. Isso significa que, ao soltar um objeto, ele vai começar a cair para o chão e sua velocidade vai aumentar a cada segundo que passa, porque a gravidade o acelera. Todos os objetos caem da mesma forma, independente do tamanho ou peso, desde que não haja resistência do ar. Isso é o que acontece, por exemplo, quando você deixa cair uma bola ou uma pena, mas sem o vento ou outras condições que possam interferir.</p>
           </div>
-          <div class="img-free-fall">
-            <img src="./src/free-fall.webp" alt="imagem exemplo de queda livre">
+          <div class="img-free-fall" data-aos="fade-up">
+            <img src="./src/free-fall.webp" alt="imagem exemplo de queda livre" data-aos="fade-up">
           </div>
         
     </section>
 
     <section id="formulas" class="formulas">
 
-      <div class="gif-newton">
-        <img src="./src/newtonMove.gif" alt="">
+      <div class="gif-newton" data-aos="fade-up">
+        <img src="./src/newtonMove.gif" alt="gif isaac newton">
       </div>
-      <div class="topic">
+      <div class="topic" data-aos="fade-up">
         <h2>Fórmulas 
             <span class="roxo">F</span><span class="roxo">u</span><span class="roxo">n</span><span class="roxo">d</span><span class="roxo">a</span><span class="roxo">m</span><span class="roxo">e</span><span class="roxo">n</span><span class="roxo">t</span><span class="roxo">a</span><span class="roxo">i</span><span class="roxo">s</span><span class="roxo">:</span>
         </h2>
     </div>
-      <div class="formulas-grid">
+      <div class="formulas-grid" data-aos="fade-up">
         <!-- Bloco de Relato -->
-        <div class="formula-item">
+        <div class="formula-item" data-aos="fade-up">
           <h3>v = v0​ + g⋅t</h3>
           <ul>
             <li>v = velocidade final do objeto</li>
@@ -113,7 +122,7 @@
           </ul>
         </div>
     
-        <div class="formula-item">
+        <div class="formula-item" data-aos="fade-up">
           <h3>s = s0 + v0 ⋅ t + 1/2 ⋅ g ⋅ t2
              </h3>
           <ul>
@@ -126,7 +135,7 @@
         </div>
     
         <!-- Adicione mais itens conforme necessário -->
-        <div class="formula-item">
+        <div class="formula-item" data-aos="fade-up">
           <h3>v2 = v02 ​+ 2⋅g⋅(s − s0​)</h3>
           <ul>
             <li>v = velocidade final</li>
@@ -137,7 +146,7 @@
           </ul>
         </div>
   
-        <div class="formula-item">
+        <div class="formula-item" data-aos="fade-up">
           <h3>s − s0 ​= (v0 + v /2) * t</h3>
           <ul>
             <li>s - s_0 = distância percorrida</li>
@@ -151,7 +160,7 @@
     </section>
 
     <section id="galileu" class="galileu">
-      <h2 id="galileu-title" class="topic">
+      <h2 id="galileu-title" class="topic" data-aos="fade-up">
         <span>E</span><span>x</span><span>p</span><span>e</span><span>r</span><span>i</span><span>m</span><span>e</span><span>n</span><span>t</span><span>o</span><span>s</span>
         <span>d</span><span>e</span>
         <span>G</span><span>a</span><span>l</span><span>i</span><span>l</span><span>e</span><span>u</span>
@@ -159,13 +168,13 @@
       </h2>
       
 
-      <div class="galileu-container">
+      <div class="galileu-container" data-aos="fade-up">
 
-        <div class="text-galileu">
+        <div class="text-galileu" data-aos="fade-up">
           <p>Galileu Galilei realizou experimentos pioneiros que demonstraram que objetos de diferentes massas caem com a mesma aceleração, desafiando a ideia de Aristóteles de que objetos mais pesados caem mais rápido. Seu experimento mais famoso é o experimento da Torre de Pisaonde ele teria soltado diferentes objetos de massas distintas.</p>
         </div>
 
-        <div class="text-galileu">
+        <div class="text-galileu" data-aos="fade-up">
           <p>
             Ele mostrou que objetos caíam com a mesma aceleração. Embora haja debates sobre a exatidão histórica do experimento na Torre de Pisa, seus estudos ajudaram a refutar a ideia de Aristóteles de que objetos mais pesados caíam mais rápido.  E seus estudos foram fundamentais para o entendimento da física e influenciaram as leis de Isaac Newton.
           </p>
@@ -176,29 +185,29 @@
     
 
     <section id="gravity" class="gravity">
-      <div class="img-apple-newton">
+      <div class="img-apple-newton"data-aos="fade-up">
         <img src="./src/apple-newton.gif" alt="">
       </div>
-      <h2 class="topic">
+      <h2 class="topic"data-aos="fade-up">
           <span>A</span><span>c</span><span>e</span><span>l</span><span>e</span><span>r</span><span>a</span><span>ç</span><span>ã</span><span>o</span>
           <span>d</span><span>a</span>
           <span>G</span><span>r</span><span>a</span><span>v</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
           <span>(</span><span>g</span><span>)</span>
       </h2>
-      <div class="gravity-container">
-      <p class="text-gravity">
+      <div class="gravity-container" data-aos="fade-up">
+      <p class="text-gravity" data-aos="fade-up">
           A aceleração da gravidade (g) é uma constante que representa a intensidade da força gravitacional na superfície da Terra.
           Seu valor médio é aproximadamente 9,8 m/s². Isso significa que qualquer objeto em queda livre
           acelera em 9,8 metros por segundo a cada segundo.
       </p>
-      <p class="text-gravity">
+      <p class="text-gravity" data-aos="fade-up">
           Esse conceito foi estudado por cientistas como Galileu Galilei e Isaac Newton. Galileu demonstrou que
           todos os objetos caem com a mesma aceleração, independentemente de sua massa (desconsiderando a resistência do ar).
           Newton, por sua vez, formulou a Lei da Gravitação Universal, que descreve a força que os corpos exercem uns sobre os outros.
       </p>
     </div>
   
-      <div class="simulation">
+      <div class="simulation" data-aos="fade-up">
           <h3>⚡ Simulação: Queda de um objeto ⚡</h3>
           <label id="gravity-label" for="gravity-input">Altura inicial (m):</label>
           <input id="gravity-input" type="number" value="10" min="1" max="100">
@@ -212,11 +221,11 @@
       </div>
   </section>
 
-  <section class="differences">
-    <h2 id="title-differences" class="topic">
+  <section id="differences" class="differences" >
+    <h2 id="title-differences" class="topic"data-aos="fade-up">
       <span>D</span><span>I</span><span>F</span><span>E</span><span>R</span><span>E</span><span>N</span><span>Ç</span><span>A</span><span>S</span>
     </h2>    
-      <div id="companies">
+      <div id="companies" data-aos="fade-up">
           <div class="company" id="company-a">
               <h3 id="subtitle-diffence">MOVIMENTO DE QUEDA LIVRE</h3>
               <div class="topic-differences" id="topic-a1">O objeto se move apenas para baixo, sob ação exclusiva da gravidade.</div>
@@ -224,28 +233,28 @@
               <div class="topic-differences" id="topic-a3">A aceleração é sempre a gravidade (aproximadamente 9,8m/s²), atuando para baixo.</div>
               <div class="topic-differences" id="topic-a4">O tempo depende apenas da altura inicial do objeto.</div>
           </div>
-          <div id="vs">VS</div>
-          <div class="company" id="company-b">
+          <div id="vs" data-aos="fade-up">VS</div>
+          <div class="company" id="company-b" data-aos="fade-up">
               <h3 id="subtitle-diffence">LANÇAMENTO DE OBETOS VERTICALMENTE</h3>
-              <div class="topic-differences" id="topic-b1">O objeto pode subir antes de descer, pois recebe uma velocidade inicial para cima.</div>
-              <div class="topic-differences" id="topic-b2"> A velocidade inicial é diferente de zero e direcionada para cima.
+              <div class="topic-differences" id="topic-b1" data-aos="fade-up">O objeto pode subir antes de descer, pois recebe uma velocidade inicial para cima.</div>
+              <div class="topic-differences" id="topic-b2" data-aos="fade-up"> A velocidade inicial é diferente de zero e direcionada para cima.
               </div>
-              <div class="topic-differences" id="topic-b3">A aceleração também é a gravidade, mas inicialmente atua no sentido oposto ao movimento.</div>
-              <div class="topic-differences" id="topic-b4">O tempo total inclui a subida e a descida, sendo o dobro do tempo de subida.</div>
+              <div class="topic-differences" id="topic-b3" data-aos="fade-up">A aceleração também é a gravidade, mas inicialmente atua no sentido oposto ao movimento.</div>
+              <div class="topic-differences" id="topic-b4" data-aos="fade-up">O tempo total inclui a subida e a descida, sendo o dobro do tempo de subida.</div>
           </div>
       </div>
   </section>
 
-  <section class="air-influency">
-    <h2 class="topic" id="title-influency">
+  <section id="air-influency" class="air-influency">
+    <h2 class="topic" id="title-influency" data-aos="fade-up">
       <span>I</span><span>n</span><span>f</span><span>l</span><span>u</span><span>ê</span><span>n</span><span>c</span><span>i</span><span>a</span>
       <span>d</span><span>a</span>
       <span>R</span><span>e</span><span>s</span><span>i</span><span>s</span><span>t</span><span>ê</span><span>n</span><span>c</span><span>i</span><span>a</span>
       <span>d</span><span>o</span>
       <span>A</span><span>r</span>
   </h2>
-    <h2 class="subititle" id="sub-influency">Como a presença do ar afeta a velocidade e a aceleração de objetos em queda.</h2>
-    <div class="influency-container">
+    <h2 class="subititle" id="sub-influency" data-aos="fade-up">Como a presença do ar afeta a velocidade e a aceleração de objetos em queda.</h2>
+    <div class="influency-container" data-aos="fade-up">
     <div class="imgs">
       <div class="img1-inflency">
         <img src="./src/parachute.png" alt="parachute">
@@ -254,102 +263,102 @@
         <img src="./src/balloon.jpg" alt="balloon">
       </div>
     </div>
-    <div class="text-influency">
+    <div class="text-influency"data-aos="fade-up">
       <p>A resistência do ar atua contra o movimento de um objeto em queda, reduzindo sua aceleração. Em uma queda livre no vácuo, todos os objetos caem com a mesma aceleração, mas na atmosfera, a forma, o tamanho e a massa influenciam a velocidade de queda, podendo levar o objeto a atingir a chamada velocidade terminal, quando a força da resistência do ar se iguala à força gravitacional, impedindo aceleração adicional.</p>
     </div>
   </div>
   </section>
 
-  <section class="aplications-section">
-    <h2 class="topic" id="title-aplications">
+  <section id="aplications-section" class="aplications-section" >
+    <h2 class="topic" id="title-aplications" data-aos="fade-up">
       <span>A</span><span>p</span><span>l</span><span>i</span><span>c</span><span>a</span><span>ç</span><span>õ</span><span>e</span><span>s</span>
       <span>P</span><span>r</span><span>á</span><span>t</span><span>i</span><span>c</span><span>a</span><span>s</span>
       <span>d</span><span>a</span>
       <span>Q</span><span>u</span><span>e</span><span>d</span><span>a</span>
       <span>L</span><span>i</span><span>v</span><span>r</span><span>e</span>
   </h2>
-    <h2 id="sub-aplications">Como esse conceito é aplicado no mundo real</h2>
+    <h2 id="sub-aplications" data-aos="fade-up">Como esse conceito é aplicado no mundo real</h2>
 
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
+    <div class="swiper mySwiper"data-aos="fade-up">
+        <div class="swiper-wrapper" data-aos="fade-up">
+            <div class="swiper-slide" data-aos="fade-up">
                 <h3>1. Engenharia e Construção Civil</h3>
                 <br>
                 <h4><strong>Projetos de Elevadores:</strong></h4>
                 <p>Cálculo da aceleração e sistemas de frenagem para segurança de passageiros.</p>
                 <img src="./src/aplications/elevator.png" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up">
               <h3>1. Engenharia e Construção Civil</h3>
               <br>
               <h4><strong>Resistência de Materiais:</strong></h4>
               <p>Testes de impacto em estruturas para avaliar resistência a quedas e colisões.</p>
               <img src="./src/aplications/resistance.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up">
               <h3>1. Engenharia e Construção Civil</h3>
               <br>
               <h4><strong>Dinâmica de Pontes e Viadutos:</strong></h4>
-              <p>Análise de objetos que podem cair de grandes alturas, como ferramentas de trabalhadores.</p>
+              <p>Análise de objetos que podem cair de grandes alturas, como ferramentas.</p>
               <img src="./src/aplications/bridge.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up">
               <h3>2. Esportes e Entretenimento</h3>
               <br>
               <h4><strong>Paraquedismo e Base Jump:</strong></h4>
               <p>Cálculo da aceleração e resistência do ar para determinar trajetórias seguras.</p>
               <img src="./src/aplications/jump.jpeg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide" data-aos="fade-up">
               <h3>2. Esportes e Entretenimento</h3>
               <br>
               <h4><strong>Mergulho de Penhasco (Cliff Diving):</strong></h4>
               <p>Previsão do tempo de queda e impacto na água para evitar lesões.</p>
               <img src="./src/aplications/cliff-diving.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>2. Esportes e Entretenimento</h3>
               <br>
               <h4><strong>Salto com Vara e Ginástica Olímpica:</strong></h4>
               <p>Estudo das forças atuantes durante a queda após o ápice do salto.</p>
               <img src="./src/aplications/pole-vault.png" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>3. Segurança e Investigação</h3>
               <br>
               <h4><strong>Acidentes Automobilísticos:</strong></h4>
               <p>Análise da trajetória de corpos em colisões e quedas para reconstituição de acidentes.</p>
               <img src="./src/aplications/accidents.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>3. Segurança e Investigação</h3>
               <br>
               <h4><strong>Criminalística e Forense:</strong></h4>
               <p>Cálculo da altura de uma queda para determinar causas de mortes.</p>
               <img src="./src/aplications/forensic.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>3. Segurança e Investigação</h3>
               <br>
               <h4><strong>Testes de Airbags e Sistemas de Segurança:</strong></h4>
               <p>Simulação de quedas para aprimorar tecnologias de proteção.</p>
               <img src="./src/aplications/airbag.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>4. Ciências e Pesquisa</h3>
               <br>
               <h4><strong>Experimentos em Física:</strong></h4>
               <p>Testes para validar a teoria da gravidade e medir a aceleração gravitacional local.</p>
               <img src="./src/aplications/test.jpg" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>4. Ciências e Pesquisa</h3>
               <br>
               <h4><strong>Estudos Astronômicos:</strong></h4>
               <p>Cálculo da queda livre em diferentes corpos celestes, como na Lua e em Marte.</p>
               <img src="./src/aplications/planets.png" alt="">
             </div>
-            <div class="swiper-slide">
+            <div class="swiper-slide"data-aos="fade-up">
               <h3>4. Ciências e Pesquisa</h3>
               <br>
               <h4><strong>Desenvolvimento Aeroespacial:</strong></h4>
@@ -365,64 +374,104 @@
   </section>
 
   <section id="free-fall-different-planets" class="free-fall-different-planets-section">
-    <h2>Queda livre em diferentes planetas:</h2>
-    <b>"Como a variação da gravidade em outros corpos celestes afeta o movimento de queda"</b>
-    <div class="free-fall-different-planets-container">
+    <h2 class="topic" id="title-planet" data-aos="fade-up">
+      <span>Q</span><span>u</span><span>e</span><span>d</span><span>a</span>
+      <span>l</span><span>i</span><span>v</span><span>r</span><span>e</span>
+      <span>e</span><span>m</span>
+      <span>d</span><span>i</span><span>f</span><span>e</span><span>r</span><span>e</span><span>n</span><span>t</span><span>e</span><span>s</span>
+      <span>p</span><span>l</span><span>a</span><span>n</span><span>e</span><span>t</span><span>a</span><span>s</span><span>:</span>
+  </h2>
+    <b id="text-planet"data-aos="fade-up">"Como a variação da gravidade em outros corpos celestes afeta o movimento de queda"</b>
+    <div class="free-fall-different-planets-container"data-aos="fade-up">
       <!-- Card 1: Suítes Exclusivas -->
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/moon.png" alt="Pet em suíte exclusiva">
-        <h3>🌙 Lua</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/moon.png" alt="">
+        <h3 id="moon">🌙 Lua</h3>
         <p>Com uma gravidade bem menor, de 1.62 m/s², um objeto leva cerca de 3.52 segundos para cair a mesma altura.</p>
       </div>
   
       <!-- Card 2: Recreação e Lazer -->
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/mars.png" alt="Pets brincando em área externa">
-        <h3>🔴 Marte</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/mars.png" alt="">
+        <h3 id="mars">🔴 Marte</h3>
         <p>A gravidade marciana é de 3.72 m/s², então o tempo de queda de 10 metros é aproximadamente 2.32 segundos.</p>
       </div>
   
       <!-- Card 3: Alimentação Balanceada -->
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/mercury.png" alt="Comida saudável para pets">
-        <h3>🟠 Mercúrio</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/mercury.png" alt="">
+        <h3 id="mercury">🟠 Mercúrio</h3>
         <p>Com gravidade similar à de Marte, 3.70 m/s², o tempo de queda é cerca de 2.33 segundos.</p>
       </div>
 
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/venus.jpg" alt="Comida saudável para pets">
-        <h3>🟡 Vênus</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/venus.jpg" alt="">
+        <h3 id="venus">🟡 Vênus</h3>
         <p>A gravidade venusiana é de 8.87 m/s², resultando em um tempo de queda de 1.50 segundos.</p>
       </div>
 
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/jupiter.jpg" alt="Comida saudável para pets">
-        <h3>🟤 Júpiter</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/jupiter.jpg" alt="">
+        <h3 id="jupiter">🟤 Júpiter</h3>
         <p>O maior planeta do Sistema Solar tem uma gravidade intensa de 24.79 m/s², então um objeto cai em 0.90 segundos.</p>
       </div>
 
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/saturn.jpg" alt="Comida saudável para pets">
-        <h3>⚫ Saturno</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/saturn.jpg" alt="">
+        <h3 id="saturn">⚫ Saturno</h3>
         <p>Com 10.44 m/s² de gravidade, um objeto cairia em 1.39 segundos.</p>
       </div>
 
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/uranus.png" alt="Comida saudável para pets">
-        <h3>🟢 Urano</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/uranus.png" alt="">
+        <h3 id="uranus">🟢 Urano</h3>
         <p>A gravidade de 8.69 m/s² faz com que um objeto leve 1.52 segundos para cair.</p>
       </div>
 
-      <div class="free-fall-different-planets-card">
-        <img src="./src/freeFallDifferentPlanets/neptune.png" alt="Comida saudável para pets">
-        <h3>🔵 Netuno</h3>
+      <div class="free-fall-different-planets-card"data-aos="fade-up">
+        <img src="./src/freeFallDifferentPlanets/neptune.png" alt="">
+        <h3 id="neptune">🔵 Netuno</h3>
         <p>Sua gravidade de 11.15 m/s² faz um objeto cair em 1.35 segundos.</p>
       </div>
     </div>
   </section>
 
-  
 
+  <section class="about-us" id="about-us">
+    <h2 class="topic" id="title-us" data-aos="fade-up">
+      <span>S</span><span>o</span><span>b</span><span>r</span><span>e</span>
+      <span>n</span><span>ó</span><span>s</span><span>:</span>
+  </h2>
+    <div class="about-us-container"data-aos="fade-up">
+      <div class="about-us-card"data-aos="fade-up">
+        <img src="./src/aboutUs/muriloMoreno.jpg" alt="Murilo Moreno">
+        <h3 id="murilo-moreno">Murilo Moreno 3ºE</h3>
+        <p>Desenvolvedor do Site</p>
+      </div>
+  
+      <div class="about-us-card" id="about-us-card-toledo"data-aos="fade-up">
+        <img src="./src/aboutUs/tiagoToledo.jpg" alt="Tiago Toledo"data-aos="fade-up">
+        <h3 id="tiago-toledo">Tiago Toledo</h3>
+        <p>Professor Instrutor</p>
+      </div>
+  
+      <div class="about-us-card"data-aos="fade-up">
+        <img src="./src/aboutUs/marcoAntonio.jpeg" alt="Marco Antônio"data-aos="fade-up">
+        <h3 id="marco-anotonio">Marco Antônio 3ºE</h3>
+        <p>Desenvolvedor do Site</p>
+      </div>
+    </div>
+    <div class="img-sesi-senai"data-aos="fade-up">
+      <img src="./src/sesiSenai.png" alt="">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Física com Toledo - Todos os direitos reservados.</p>
+  </footer>
+
+  
+  
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>  
 </html>

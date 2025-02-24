@@ -380,6 +380,7 @@ li {
 .header {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -387,7 +388,8 @@ li {
   padding: 15px 50px;
   background: transparent;
   mix-blend-mode: difference;
-  z-index: 10000;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.9); /* Ajuste conforme necessário */
 }
 
 .logo {
@@ -456,70 +458,27 @@ li {
   border-radius: 20px; /* Aumenta o arredondamento no hover */
 }
 
-/* Telas menores que 992px (Tablets e celulares grandes) */
-@media (max-width: 992px) {
-  .header {
-    padding: 15px 30px;
-  }
-  .logo img {
-    width: 80px;
-  }
-  .nav-links {
-    gap: 30px;
-  }
-  .nav-links a {
-    font-size: 18px;
-    padding: 6px 20px;
-  }
-  .menu-icon {
-    padding: 5px 14px;
-    font-size: 28px;
-  }
-}
-/* Telas menores que 768px (Celulares médios e pequenos) */
-@media (max-width: 768px) {
-  .header {
-    padding: 15px 20px;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: rgba(0, 0, 0, 0.9);
-    border-radius: 10px;
-    padding: 15px;
-    width: 180px;
-    text-align: center;
-  }
-  .nav-links a {
-    display: block;
-    margin: 10px 0;
-    font-size: 16px;
-    padding: 10px;
-  }
-  .menu-icon {
-    display: block;
-  }
-}
-/* Telas menores que 480px (Celulares pequenos) */
 @media (max-width: 480px) {
-  .header {
-    padding: 10px 15px;
+  header {
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .nav-links {
+    gap: 10px;
+    align-items: center;
+  }
+  .nav-links a {
+    font-size: 10px;
+    padding: 5px 10px;
   }
   .logo img {
-    width: 70px;
-  }
-  .menu-icon {
-    font-size: 24px;
-    padding: 4px 12px;
+    width: 60px;
   }
 }
 .side-menu {
   width: 300px;
   background: linear-gradient(135deg, #444, #111);
-  height: 100%;
+  height: 100vh;
   position: fixed;
   top: 0;
   right: -300px; /* Fora da tela por padrão */
@@ -528,7 +487,8 @@ li {
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
   padding-top: 30px;
   color: white;
-  z-index: 9999;
+  z-index: 1100;
+  transition: right 0.3s ease-in-out;
 }
 
 .side-menu ul {
@@ -569,6 +529,28 @@ li {
 
 .close-btn:hover {
   transform: rotate(90deg);
+}
+
+/* Fundo escuro quando o menu está aberto */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Cor escura transparente */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1050; /* Menor que o menu lateral */
+  display: none;
+}
+
+/* Ativa o fundo quando o menu é aberto */
+.menu-overlay.active {
+  visibility: visible;
+  opacity: 1;
+  display: block;
 }
 
 .free-fall {
@@ -645,7 +627,7 @@ li {
 }
 
 .text-free-fall:hover {
-  transform: scale(1.07);
+  transform: scale(1.07) !important;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra suave ao redor da caixa */
 }
 
@@ -890,7 +872,7 @@ li {
 
 /* Efeitos ao passar o mouse */
 .formula-item:hover {
-  transform: scale(1.05) rotateY(0);
+  transform: scale(1.05) rotateY(0) !important;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
 }
 
@@ -916,7 +898,7 @@ li {
   display: inline-block;
   animation: flutuarSuave 4s ease-in-out infinite, brilhoPulsante 2.5s ease-in-out infinite alternate;
   color: #5019b6;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black; /* Borda preta */
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
 /* Flutuação mais fluida e natural */
@@ -1020,24 +1002,27 @@ li {
     position: relative;
     margin: 0 auto;
     display: block;
-    height: 100px;
+    height: 150px;
   }
   .formulas-grid {
     grid-template-columns: 1fr; /* 1 coluna */
     gap: 15px;
+    margin-top: 20px;
   }
   .topic h2 {
-    font-size: 40px;
+    font-size: 70px;
   }
   .formula-item {
-    max-width: 100%;
+    align-items: center;
+    max-width: 80%;
     min-height: auto;
+    margin: auto;
   }
 }
 /* Ajustes para celulares pequenos (telas menores que 480px) */
 @media (max-width: 480px) {
   .topic h2 {
-    font-size: 30px;
+    font-size: 45px;
   }
   .formulas {
     padding: 30px 10px;
@@ -1083,10 +1068,11 @@ li {
 }
 
 .text-galileu:hover {
-  transform: scale(1.2);
+  transform: scale(1.08) !important;
 }
 
 #galileu-title span {
+  color: #764918;
   position: relative;
   display: inline-block;
   letter-spacing: 6px;
@@ -1253,7 +1239,7 @@ li {
 /* Para telas menores que 480px */
 @media (max-width: 480px) {
   #galileu-title {
-    font-size: 2.9rem;
+    font-size: 2.3rem;
   }
   .text-galileu {
     font-size: 12px;
@@ -1293,7 +1279,7 @@ li {
   width: 370px;
   height: 330px;
   padding: 20px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.3);
+  box-shadow: 1px 3px rgba(60, 0, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1363,7 +1349,7 @@ li {
 
 #gravity h2 {
   font-family: "Delicious Handrawn";
-  text-shadow: -2px -2px 0 rgb(0, 0, 0), 2px -2px 0 rgb(0, 0, 0), -2px 2px 0 rgb(0, 0, 0), 2px 2px 0 #c03333;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
 /* Estilização do texto com efeito de flutuação */
@@ -1487,7 +1473,7 @@ li {
 }
 
 .text-gravity:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 /* Telas menores (até 768px) */
@@ -1518,7 +1504,7 @@ li {
 /* Telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
   .topic {
-    font-size: 20px;
+    font-size: 40px;
   }
   .text-gravity {
     font-size: 14px;
@@ -1567,19 +1553,19 @@ li {
   justify-content: center;
   align-items: center;
   box-shadow: 3px 2px 1px black;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Poppins";
   font-weight: 300;
 }
 
 .topic-differences:hover {
-  transform: scale(1.06);
+  transform: scale(1.06) !important;
 }
 
 #vs {
   font-size: 40px;
   font-weight: bold;
-  color: red;
+  color: #5019b6;
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
@@ -1593,7 +1579,7 @@ li {
 
 #title-differences {
   font-family: "Delicious Handrawn", serif;
-  color: red;
+  color: #5019b6;
   letter-spacing: 4px;
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
@@ -1604,7 +1590,7 @@ li {
   display: inline-block;
   animation: flutuarSuave 4s ease-in-out infinite;
   font-family: "Delicious Handrawn";
-  color: red;
+  color: #5019b6;
 }
 
 /* Animação de flutuação suave */
@@ -1696,7 +1682,7 @@ li {
     padding-top: 20px;
   }
   #title-differences {
-    font-size: 24px;
+    font-size: 40px;
     letter-spacing: 2px;
   }
   .company {
@@ -1773,7 +1759,7 @@ li {
 }
 
 .text-influency:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) !important;
 }
 
 #title-influency span {
@@ -1783,7 +1769,7 @@ li {
   display: inline-block;
   animation: flutuarSuave 4s ease-in-out infinite;
   font-family: "Delicious Handrawn";
-  color: #4c8fea;
+  color: #764918;
   text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
@@ -1846,9 +1832,7 @@ li {
     text-align: center;
     flex-direction: column;
     gap: 20px;
-  }
-  .imgs img {
-    max-width: 60%; /* Ajusta a largura das imagens */
+    width: 100%;
   }
   #sub-influency {
     font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
@@ -1861,7 +1845,7 @@ li {
 /* Para telas menores que 768px (celulares grandes e tablets pequenos) */
 @media (max-width: 768px) {
   #title-influency {
-    font-size: 24px; /* Reduz o tamanho do título principal */
+    font-size: 54px; /* Reduz o tamanho do título principal */
   }
   #sub-influency {
     font-size: 16px; /* Reduz ainda mais o tamanho da fonte do subtítulo */
@@ -1873,7 +1857,7 @@ li {
 /* Para telas menores que 480px (smartphones pequenos) */
 @media (max-width: 480px) {
   #title-influency {
-    font-size: 20px; /* Tamanho do título principal para telas pequenas */
+    font-size: 40px; /* Tamanho do título principal para telas pequenas */
   }
   #sub-influency {
     font-size: 14px; /* Tamanho do subtítulo para telas pequenas */
@@ -1883,12 +1867,10 @@ li {
     padding: 8px; /* Ajuste do padding */
   }
   .imgs img {
-    max-width: 100%; /* Imagens ocupam 100% da largura */
+    width: 100%; /* Imagens ocupam 100% da largura */
   }
 }
 .aplications-section {
-  font-family: "Poppins";
-  background-color: #f4f4f4;
   text-align: center;
   padding: 40px;
   background: linear-gradient(to bottom, #ccc, #180E07);
@@ -1896,14 +1878,15 @@ li {
 
 .title-aplications {
   font-size: 28px;
-  color: #333;
+  color: #000000;
 }
 
 #sub-aplications {
   font-size: 22px;
-  color: #555;
+  color: #000000;
   font-family: "Poppins";
   font-weight: 300;
+  color: #180E07;
 }
 
 .swiper {
@@ -1913,10 +1896,11 @@ li {
 }
 
 .swiper-slide {
-  background: white;
+  background: rgb(177, 176, 176);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins";
 }
 
 .swiper-slide img {
@@ -1928,12 +1912,12 @@ li {
 
 .swiper-slide h3 {
   font-size: 20px;
-  color: #333;
+  color: #3a0074;
 }
 
 .swiper-slide p {
   font-size: 16px;
-  color: #666;
+  color: #000000;
 }
 
 .swiper-button-next,
@@ -1956,6 +1940,7 @@ li {
   animation: flutuarSuave 4s ease-in-out infinite;
   font-family: "Delicious Handrawn";
   color: #3a0074;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
 @keyframes flutuarSuave {
@@ -2070,12 +2055,12 @@ li {
 }
 
 /* Para telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .aplications-section {
     padding: 20px;
   }
   #title-aplications {
-    font-size: 24px; /* Reduz o tamanho da fonte */
+    font-size: 44px; /* Reduz o tamanho da fonte */
   }
   #sub-aplications {
     font-size: 18px; /* Reduz o tamanho da fonte */
@@ -2101,7 +2086,7 @@ li {
 /* Para telas menores que 480px (celulares) */
 @media (max-width: 480px) {
   #title-aplications {
-    font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+    font-size: 35px; /* Reduz ainda mais o tamanho da fonte */
   }
   #sub-aplications {
     font-size: 16px; /* Reduz ainda mais o tamanho da fonte */
@@ -2111,9 +2096,10 @@ li {
   }
   .swiper-button-next,
   .swiper-button-prev {
-    width: 35px; /* Ajusta a largura dos botões */
-    height: 35px; /* Ajusta a altura dos botões */
+    width: 49px !important; /* Ajusta a largura dos botões */
+    height: 49px !important; /* Ajusta a altura dos botões */
     font-size: 4px !important; /* Ajusta o tamanho da fonte dos botões */
+    margin-top: 28px !important;
   }
 }
 .free-fall-different-planets-section {
@@ -2124,13 +2110,18 @@ li {
 }
 
 .free-fall-different-planets-section h2 {
-  font-size: 36px;
-  color: #A7C957;
+  font-size: 70px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
 }
 
 .free-fall-different-planets-section b {
-  font-size: 18px;
-  color: #555;
+  font-size: 25px;
+  color: white;
+  font-family: "Poppins";
+}
+
+#text-planet {
+  font-weight: 300;
 }
 
 .free-fall-different-planets-container {
@@ -2142,7 +2133,7 @@ li {
 }
 
 .free-fall-different-planets-card {
-  background: #fff;
+  background: #d8d8d8;
   border-radius: 15px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   max-width: 300px;
@@ -2152,7 +2143,7 @@ li {
 }
 
 .free-fall-different-planets-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-10px) !important;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
@@ -2167,29 +2158,173 @@ li {
   font-size: 22px;
   color: #A7C957;
   margin: 15px 0;
+  font-family: "Poppins";
 }
 
 .free-fall-different-planets-card p {
   font-size: 16px;
-  color: #555;
+  color: #000000;
   padding: 0 15px 20px;
+  font-family: "Poppins";
 }
 
-.hospedagem-destaque {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 40px;
-  padding: 20px;
+#title-planet span {
+  letter-spacing: 5px;
+  position: relative;
+  display: inline-block;
+  animation: flutuarSuave 4s ease-in-out infinite;
+  font-family: "Delicious Handrawn";
+  color: #764918;
 }
 
-.hospedagem-destaque img {
-  width: 300px;
-  height: auto;
-  border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
+@keyframes flutuarSuave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#title-planet span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#title-planet span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+#title-planet span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+#title-planet span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+#title-planet span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+#title-planet span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+#title-planet span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+#title-planet span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+#title-planet span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+#title-planet span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+#title-planet span:nth-child(11) {
+  animation-delay: 1s;
+}
+
+#title-planet span:nth-child(12) {
+  animation-delay: 1.1s;
+}
+
+#title-planet span:nth-child(13) {
+  animation-delay: 1.2s;
+}
+
+#title-planet span:nth-child(14) {
+  animation-delay: 1.3s;
+}
+
+#title-planet span:nth-child(15) {
+  animation-delay: 1.4s;
+}
+
+#title-planet span:nth-child(16) {
+  animation-delay: 1.5s;
+}
+
+#title-planet span:nth-child(17) {
+  animation-delay: 1.6s;
+}
+
+#title-planet span:nth-child(18) {
+  animation-delay: 1.7s;
+}
+
+#title-planet span:nth-child(19) {
+  animation-delay: 1.8s;
+}
+
+#title-planet span:nth-child(20) {
+  animation-delay: 1.9s;
+}
+
+#title-planet span:nth-child(21) {
+  animation-delay: 2s;
+}
+
+#title-planet span:nth-child(22) {
+  animation-delay: 2.1s;
+}
+
+#title-planet span:nth-child(23) {
+  animation-delay: 2.2s;
+}
+
+#title-planet span:nth-child(24) {
+  animation-delay: 2.3s;
+}
+
+#title-planet span:nth-child(25) {
+  animation-delay: 2.4s;
+}
+
+#moon, #mars, #mercury, #venus, #jupiter, #saturn, #uranus, #neptune {
+  font-family: "Poppins", sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#moon {
+  color: #efc867;
+}
+
+#mars {
+  color: red;
+}
+
+#mercury {
+  color: #d26b2e;
+}
+
+#venus {
+  color: yellow;
+}
+
+#jupiter {
+  color: #80593d;
+}
+
+#saturn {
+  color: #383838;
+}
+
+#uranus {
+  color: #3cb735;
+}
+
+#neptune {
+  color: #1e72b5;
 }
 
 /* Para telas pequenas (até 480px) */
@@ -2203,8 +2338,15 @@ li {
   .free-fall-different-planets-section b {
     font-size: 16px;
   }
+  .free-fall-different-planets-container {
+    flex-direction: column;
+    align-items: center;
+  }
   .free-fall-different-planets-card {
-    max-width: 90%;
+    width: 100% !important;
+  }
+  .free-fall-different-planets-card img {
+    height: 150px;
   }
   .free-fall-different-planets-card h3 {
     font-size: 20px;
@@ -2213,16 +2355,24 @@ li {
     font-size: 14px;
   }
 }
-/* Para telas médias (até 768px) */
+/* Para telas médias (481px a 768px) */
 @media (max-width: 768px) {
   .free-fall-different-planets-section {
     padding: 40px 15px;
   }
   .free-fall-different-planets-section h2 {
-    font-size: 32px;
+    font-size: 45px;
+  }
+  .free-fall-different-planets-container {
+    flex-wrap: wrap;
+    gap: 15px;
   }
   .free-fall-different-planets-card {
-    max-width: 45%;
+    width: 45%;
+    max-width: 280px;
+  }
+  .free-fall-different-planets-card img {
+    height: 160px;
   }
   .free-fall-different-planets-card h3 {
     font-size: 21px;
@@ -2231,18 +2381,203 @@ li {
     font-size: 15px;
   }
 }
-/* Para telas grandes (até 1200px) */
-@media (max-width: 1200px) {
+/* Para telas grandes (769px a 1024px) */
+@media (max-width: 1024px) {
   .free-fall-different-planets-section {
     padding: 50px 20px;
   }
+  .free-fall-different-planets-container {
+    justify-content: center;
+    gap: 20px;
+  }
   .free-fall-different-planets-card {
-    max-width: 30%;
+    width: 30%;
+    max-width: 280px;
+  }
+  .free-fall-different-planets-card img {
+    height: 170px;
   }
   .free-fall-different-planets-card h3 {
     font-size: 22px;
   }
 }
+/* Para telas extra grandes (acima de 1024px) */
+@media (min-width: 1025px) {
+  .free-fall-different-planets-container {
+    justify-content: space-around;
+    gap: 25px;
+  }
+  .free-fall-different-planets-card {
+    width: 22%;
+    max-width: 300px;
+  }
+}
+.about-us {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to bottom, #000000, #5e00b7);
+  min-height: 85dvh;
+}
+
+.about-us h2 {
+  font-size: 70px;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
+}
+
+.about-us b {
+  font-size: 25px;
+  color: white;
+  font-family: "Poppins";
+}
+
+.about-us-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.about-us-card {
+  background: #d8d8d8;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us-card:hover {
+  transform: scale(1.08) !important; /* Aplica um leve zoom de 5% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-us-card img {
+  width: 100%;
+  height: 180px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-us-card h3 {
+  font-size: 22px;
+  color: #6500d1;
+  margin: 15px 0;
+  font-family: "Poppins";
+}
+
+.about-us-card p {
+  font-size: 16px;
+  color: #000000;
+  padding: 0 15px 20px;
+  font-family: "Poppins";
+}
+
+.img-sesi-senai {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.img-sesi-senai img {
+  width: 250px;
+}
+
+@media (max-width: 1024px) {
+  .about-us {
+    min-height: 110dvh;
+  }
+}
+@media (max-width: 768px) {
+  .about-us {
+    min-height: 150dvh;
+  }
+}
+@media (max-width: 480px) {
+  .about-us {
+    min-height: 195dvh;
+  }
+}
+@media (max-width: 380px) {
+  .about-us {
+    min-height: 205dvh;
+  }
+}
+#title-us {
+  color: #5019b6;
+  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black, -4px -4px 0 white, 4px -4px 0 white, -4px 4px 0 white, 4px 4px 0 white;
+}
+
+#title-us span {
+  letter-spacing: 3px;
+  position: relative;
+  display: inline-block;
+  animation: flutuarSuave 4s ease-in-out infinite;
+  font-family: "Delicious Handrawn";
+  color: #3a0074;
+}
+
+@keyframes flutuarSuave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#title-us span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#title-us span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+#title-us span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+#title-us span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+#title-us span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+#title-us span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+
+#title-us span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+
+#title-us span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+
+#title-us span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+#title-us span:nth-child(10) {
+  animation-delay: 0.9s;
+}
+
+footer {
+  background-color: #340054;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
 .poppins-thin {
   font-family: "Poppins", serif;
   font-weight: 100;

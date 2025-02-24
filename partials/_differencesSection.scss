@@ -27,17 +27,17 @@
     justify-content: center;
     align-items: center;
     box-shadow: 3px 2px 1px black;
-    font-size: 20px;
+    font-size: 18px;
     font-family:"Poppins";
     font-weight: 300;
 }
 .topic-differences:hover {
-    transform: scale(1.06);
+    transform: scale(1.06) !important;
 }
 #vs {
     font-size: 40px;
     font-weight: bold;
-    color: red;
+    color: #5019b6;
     text-shadow:
       -2px -2px 0 black,  /* Primeira borda (preta) */
        2px -2px 0 black,
@@ -64,7 +64,7 @@
 
 #title-differences {
     font-family: "Delicious Handrawn", serif;
-    color: red;
+    color: #5019b6;
     letter-spacing: 4px;
     text-shadow:
     -2px -2px 0 black,  /* Primeira borda (preta) */
@@ -85,7 +85,7 @@
     display: inline-block;
     animation: flutuarSuave 4s ease-in-out infinite;
     font-family: "Delicious Handrawn";
-    color: red;
+    color: #5019b6;
 }
 
 /* Animação de flutuação suave */
@@ -152,7 +152,7 @@
     }
 
     #title-differences {
-        font-size: 24px;
+        font-size: 40px;
         letter-spacing: 2px;
     }
 

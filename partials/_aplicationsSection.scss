@@ -1,6 +1,4 @@
 .aplications-section {
-    font-family: "Poppins";
-    background-color: #f4f4f4;
     text-align: center;
     padding: 40px;
     background: linear-gradient(to bottom, #ccc, #180E07);
@@ -8,14 +6,15 @@
 
 .title-aplications {
     font-size: 28px;
-    color: #333;
+    color: #000000;
 }
 
 #sub-aplications {
     font-size: 22px;
-    color: #555;
+    color: #000000;
     font-family: "Poppins";
     font-weight: 300;
+    color: #180E07;
 }
 
 .swiper {
@@ -25,10 +24,11 @@
 }
 
 .swiper-slide {
-    background: white;
+    background: rgb(177, 176, 176);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins";
 }
 
 .swiper-slide img{
@@ -39,12 +39,12 @@
 
 .swiper-slide h3 {
     font-size: 20px;
-    color: #333;
+    color: #3a0074;
 }
 
 .swiper-slide p {
     font-size: 16px;
-    color: #666;
+    color: #000000;
 }
 
 .swiper-button-next, 
@@ -67,6 +67,15 @@
     animation: flutuarSuave 4s ease-in-out infinite;
     font-family: "Delicious Handrawn";
     color: #3a0074;
+    text-shadow: 
+    -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
 }
 
 @keyframes flutuarSuave {
@@ -74,6 +83,7 @@
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
+
 
 #title-aplications span:nth-child(1) { animation-delay: 0s; }
 #title-aplications span:nth-child(2) { animation-delay: 0.1s; }
@@ -102,13 +112,13 @@
 #title-aplications span:nth-child(25) { animation-delay: 2.4s; }
 
 /* Para telas menores que 768px (tablets e celulares) */
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .aplications-section {
         padding: 20px;
     }
 
     #title-aplications {
-        font-size: 24px; /* Reduz o tamanho da fonte */
+        font-size: 44px; /* Reduz o tamanho da fonte */
     }
 
     #sub-aplications {
@@ -141,7 +151,7 @@
 /* Para telas menores que 480px (celulares) */
 @media (max-width: 480px) {
     #title-aplications {
-        font-size: 20px; /* Reduz ainda mais o tamanho da fonte */
+        font-size: 35px; /* Reduz ainda mais o tamanho da fonte */
     }
 
     #sub-aplications {
@@ -154,9 +164,10 @@
 
     .swiper-button-next,
     .swiper-button-prev {
-        width: 35px; /* Ajusta a largura dos botões */
-        height: 35px; /* Ajusta a altura dos botões */
+        width: 49px !important; /* Ajusta a largura dos botões */
+        height: 49px !important; /* Ajusta a altura dos botões */
         font-size: 4px !important; /* Ajusta o tamanho da fonte dos botões */
+        margin-top: 28px !important;
     }
 }
 

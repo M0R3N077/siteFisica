@@ -30,7 +30,7 @@
     width: 370px;
     height: 330px;
     padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 255, 0.3);
+    box-shadow: 1px 3px rgba(60, 0, 255, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,10 +102,14 @@
 #gravity h2{
     font-family: "Delicious Handrawn";
     text-shadow:
-      -2px -2px 0 rgb(0, 0, 0),  /* Primeira borda (preta) */
-       2px -2px 0 rgb(0, 0, 0),
-      -2px  2px 0 rgb(0, 0, 0),
-       2px  2px 0 #c03333;
+    -2px -2px 0 black,  /* Primeira borda (preta) */
+     2px -2px 0 black,
+    -2px  2px 0 black,
+     2px  2px 0 black,
+    -4px -4px 0 white,  /* Segunda borda (branca) */
+     4px -4px 0 white,
+    -4px  4px 0 white,
+     4px  4px 0 white;
        
   }
 
@@ -159,7 +163,7 @@
   }
   
   .text-gravity:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) !important; 
   }
 
 
@@ -196,7 +200,7 @@
 /* Telas muito pequenas (até 480px) */
 @media (max-width: 480px) {
     .topic {
-        font-size: 20px;
+        font-size: 40px;
     }
 
     .text-gravity {

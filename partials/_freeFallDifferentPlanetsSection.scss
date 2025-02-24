@@ -6,13 +6,26 @@
   }
   
   .free-fall-different-planets-section h2 {
-    font-size: 36px;
-    color: #A7C957;
+    font-size: 70px;
+    text-shadow:
+      -2px -2px 0 black,  /* Primeira borda (preta) */
+       2px -2px 0 black,
+      -2px  2px 0 black,
+       2px  2px 0 black,
+      -4px -4px 0 white,  /* Segunda borda (branca) */
+       4px -4px 0 white,
+      -4px  4px 0 white,
+       4px  4px 0 white;
   }
   
   .free-fall-different-planets-section b {
-    font-size: 18px;
-    color: #555;
+    font-size: 25px;
+    color: white;
+    font-family: "Poppins";
+  }
+  
+  #text-planet{
+    font-weight: 300;
   }
   
   .free-fall-different-planets-container {
@@ -24,7 +37,7 @@
   }
   
   .free-fall-different-planets-card {
-    background: #fff;
+    background: #d8d8d8;
     border-radius: 15px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 300px;
@@ -34,7 +47,7 @@
   }
   
   .free-fall-different-planets-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) !important;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   }
   
@@ -48,92 +61,204 @@
     font-size: 22px;
     color: #A7C957;
     margin: 15px 0;
+    font-family: "Poppins";
   }
   
   .free-fall-different-planets-card p {
     font-size: 16px;
-    color: #555;
+    color: #000000;
     padding: 0 15px 20px;
+    font-family: "Poppins";
   }
   
-  .hospedagem-destaque {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-    padding: 20px;
-  }
-  
-  .hospedagem-destaque img {
-    width: 300px;
-    height: auto;
-    border-radius: 15px;
-    object-fit: cover;
-  }
-  
-  /* Para telas pequenas (até 480px) */
+
+#title-planet span {
+  letter-spacing: 5px;
+  position: relative;
+  display: inline-block;
+  animation: flutuarSuave 4s ease-in-out infinite;
+  font-family: "Delicious Handrawn";
+  color: #764918;
+}
+
+@keyframes flutuarSuave {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+#title-planet span:nth-child(1) { animation-delay: 0s; }
+#title-planet span:nth-child(2) { animation-delay: 0.1s; }
+#title-planet span:nth-child(3) { animation-delay: 0.2s; }
+#title-planet span:nth-child(4) { animation-delay: 0.3s; }
+#title-planet span:nth-child(5) { animation-delay: 0.4s; }
+#title-planet span:nth-child(6) { animation-delay: 0.5s; }
+#title-planet span:nth-child(7) { animation-delay: 0.6s; }
+#title-planet span:nth-child(8) { animation-delay: 0.7s; }
+#title-planet span:nth-child(9) { animation-delay: 0.8s; }
+#title-planet span:nth-child(10) { animation-delay: 0.9s; }
+#title-planet span:nth-child(11) { animation-delay: 1s; }
+#title-planet span:nth-child(12) { animation-delay: 1.1s; }
+#title-planet span:nth-child(13) { animation-delay: 1.2s; }
+#title-planet span:nth-child(14) { animation-delay: 1.3s; }
+#title-planet span:nth-child(15) { animation-delay: 1.4s; }
+#title-planet span:nth-child(16) { animation-delay: 1.5s; }
+#title-planet span:nth-child(17) { animation-delay: 1.6s; }
+#title-planet span:nth-child(18) { animation-delay: 1.7s; }
+#title-planet span:nth-child(19) { animation-delay: 1.8s; }
+#title-planet span:nth-child(20) { animation-delay: 1.9s; }
+#title-planet span:nth-child(21) { animation-delay: 2s; }
+#title-planet span:nth-child(22) { animation-delay: 2.1s; }
+#title-planet span:nth-child(23) { animation-delay: 2.2s; }
+#title-planet span:nth-child(24) { animation-delay: 2.3s; }
+#title-planet span:nth-child(25) { animation-delay: 2.4s; }
+
+#moon, #mars, #mercury, #venus, #jupiter, #saturn, #uranus, #neptune {
+  font-family: "Poppins", sans-serif;
+  text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+#moon {
+  color: #efc867;
+}
+
+#mars {
+  color: red;
+}
+
+#mercury {
+  color: #d26b2e;
+}
+
+#venus {
+  color: yellow;
+}
+
+#jupiter {
+  color: #80593d;
+}
+
+#saturn {
+  color: #383838;
+}
+
+#uranus {
+  color: #3cb735;
+}
+
+#neptune {
+  color: #1e72b5;
+}
+
+
+
+
+/* Para telas pequenas (até 480px) */
 @media (max-width: 480px) {
   .free-fall-different-planets-section {
-      padding: 30px 10px;
+    padding: 30px 10px;
   }
 
   .free-fall-different-planets-section h2 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   .free-fall-different-planets-section b {
-      font-size: 16px;
+    font-size: 16px;
+  }
+
+  .free-fall-different-planets-container {
+    flex-direction: column;
+    align-items: center;
   }
 
   .free-fall-different-planets-card {
-      max-width: 90%;
+    width: 100% !important;
+    
+  }
+
+  .free-fall-different-planets-card img {
+    height: 150px;
   }
 
   .free-fall-different-planets-card h3 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .free-fall-different-planets-card p {
-      font-size: 14px;
+    font-size: 14px;
   }
 }
 
-/* Para telas médias (até 768px) */
+/* Para telas médias (481px a 768px) */
 @media (max-width: 768px) {
   .free-fall-different-planets-section {
-      padding: 40px 15px;
+    padding: 40px 15px;
   }
 
   .free-fall-different-planets-section h2 {
-      font-size: 32px;
+    font-size: 45px;
+  }
+
+  .free-fall-different-planets-container {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 
   .free-fall-different-planets-card {
-      max-width: 45%;
+    width: 45%;
+    max-width: 280px;
+  }
+
+  .free-fall-different-planets-card img {
+    height: 160px;
   }
 
   .free-fall-different-planets-card h3 {
-      font-size: 21px;
+    font-size: 21px;
   }
 
   .free-fall-different-planets-card p {
-      font-size: 15px;
+    font-size: 15px;
   }
 }
 
-/* Para telas grandes (até 1200px) */
-@media (max-width: 1200px) {
+/* Para telas grandes (769px a 1024px) */
+@media (max-width: 1024px) {
   .free-fall-different-planets-section {
-      padding: 50px 20px;
+    padding: 50px 20px;
+  }
+
+  .free-fall-different-planets-container {
+    justify-content: center;
+    gap: 20px;
   }
 
   .free-fall-different-planets-card {
-      max-width: 30%;
+    width: 30%;
+    max-width: 280px;
+  }
+
+  .free-fall-different-planets-card img {
+    height: 170px;
   }
 
   .free-fall-different-planets-card h3 {
-      font-size: 22px;
+    font-size: 22px;
   }
 }
 
+/* Para telas extra grandes (acima de 1024px) */
+@media (min-width: 1025px) {
+  .free-fall-different-planets-container {
+    justify-content: space-around;
+    gap: 25px;
+  }
+
+  .free-fall-different-planets-card {
+    width: 22%;
+    max-width: 300px;
+  }
+}
